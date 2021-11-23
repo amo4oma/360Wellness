@@ -351,11 +351,17 @@ width: 80%;
 }
 
 #new-horizons{
-    margin-top: 400px;
-    height: 544px;
+ 
+    height: 100vh;
     width: 100%;
     background-color: #ED1D6D;
   
+}
+
+.fa-chevron-down{
+    font-size: 17px;
+ 
+   
 }
 .new-horizons-p{
     height: 243px;
@@ -575,6 +581,19 @@ width: 95%;
     cursor: pointer;
 }
 
+#steps{
+    position: relative;
+margin-top: -650px;
+}
+.rectangler-5 {
+    position: absolute;
+  
+    height: 1172.75px;
+    width: 992.75px;
+    border-radius: 0 850px 850px 0;
+    background: linear-gradient(270deg, #FFCCD4 1%, rgba(251,218,223,0.9) 32%, rgba(245, 216, 221, 0.2) 92%, rgba(251,218,223,0) 100%);
+    transform: rotate(-45deg);
+  }
 .swiper {
  
     width: 600px;
