@@ -7,10 +7,7 @@
 body{
     overflow-x: hidden;
 }
-  @font-face {
-    font-family: Mont heavy;
-    src: url(assests/mont/Mont-HeavyDEMO.otf);
-  }
+ 
   @font-face {
     font-family: Mont regular;
     src: url(assests/mont/Mont-Regular.otf);
@@ -22,6 +19,22 @@ body{
   @font-face {
     font-family: Mont-bold;
     src: url(assests/mont/Mont-Bold.otf);
+  }
+  @font-face {
+    font-family: Mont-black;
+    src: url(assests/mont/Mont-Black.otf);
+  }
+  @font-face {
+    font-family: Mont-light;
+    src: url(assests/mont/Mont-Light.otf);
+  }
+  @font-face {
+    font-family: Mont-Sembold;
+    src: url(assests/mont/Mont-SemiBold.otf);
+  }
+  @font-face {
+    font-family:  Mont heavy;
+    src: url(assests/mont/Mont-Heavy.otf);
   }
   
  .navbar{
@@ -413,15 +426,55 @@ width: 80%;
 }
 #revenue-calculator{
 margin-top: 600px;
+height: 100vh;
+position: relative;
+bottom: 150px;
 
+}
+
+#rav-container{
+    height: 80vh;
+    background: #FCF8F3;
+    position: relative;
+    z-index: 0;
+}
+.gradian{
+    background: linear-gradient(91.15deg, #006EB9 0%, #EC1C6D 100%);
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    left: -100%;
+    z-index: -1;
+    margin: 0px -10px;
+    animation: left 1s left ease-in;
+    transition: ease-in 0.54s;
+
+}
+.start-growing-btn{
+    color: #006EB9;
+    font-family: Mont-bold !important;
+    font-size: 17px;
+    text-decoration: none;
+    border-radius: 100rem;
+    padding: 1rem;
+    padding: .5rem 3rem;
+    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #006EB9, #EC1C6D);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px #FCF8F3 inset;
+   
+  
 }
 .increase-ravenue-title{
     position: relative;
+ 
     bottom: 50px;
-font-family: Mont-Bold;
-font-size: 50px;
-color: #000;
-width: 95%;
+    font-family: Mont-Bold;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    width: 95%;
 
 }
 .increase-ravenue-p{
@@ -514,22 +567,39 @@ width: 95%;
     font-size: 40px;
     width: 50%;
 }
-
+.calculator{
+    border-radius: 75px;
+    background-color: #FDFDFD;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.15);
+    height: 120px;
+    margin-top: 50px;
+    background-position:left bottom;
+    transition:all 1s ease;
+}
+.cal-p{
+    color: #000;
+    font-family: Mont regular;
+    font-size: 25px;
+    line-height: 35px;
+}
+.cal-txt{
+    color: #006EB9;
+    font-family: Mont-bold;
+    line-height: 65px;
+}
 .ravenue-btn{
+ 
     position: relative;
-    top: 50px;
-    height: 55px;
-    width: 610px;
+    top: 40px;
+    left: 164px;
     border-radius: 50px;
-    background-color: #ED1D6D;
+    background-color: #006EB9;
     color: #FFF;
     font-family: Mont regular;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 30px;
     text-align: center;
-    padding: 20px 50px;
+    padding: 30px 59px;
     text-decoration: none;
-    text-transform: uppercase;
     z-index: 1;
 
 }
@@ -544,21 +614,31 @@ width: 95%;
     background: none;
     border: none;
     width: 150px;
-    color: #FFF;
+    color: #006EB9;
     border-bottom: #FFF solid 1px;
 }
 
 .cal-input::placeholder{
-    color: #FFF;
+    color: #006EB9;
     text-align: center;
 }
 .cal-input:focus{
     border: none;
 }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 .dropdown-content{
-    position: absolute;
-  left: 232px;
-   top: 88px;
+    position: relative;
+ left: 331px;
   height: 150px;
   width: 110px;
   border-radius: 10px;
@@ -581,9 +661,24 @@ width: 95%;
     cursor: pointer;
 }
 
+.result-p{
+    margin-top: 60px;
+    color: #000;
+    font-family: Mont-bold;
+    font-size: 20px;
+}
+
+.result-h1{
+    color: #ED1D6D;
+    font-family: Mont-bold;
+    font-size: 150px;
+    font-weight: 700;
+    line-height: 155px;
+    transition: 1s;
+}
 #steps{
     position: relative;
-margin-top: -650px;
+ 
 }
 .rectangler-5 {
     position: absolute;
@@ -595,33 +690,37 @@ margin-top: -650px;
     transform: rotate(-45deg);
   }
 .swiper {
- 
-    width: 600px;
-    height: 400px;
+    position: relative;
+    width: 644px;
+    height: 627px;
 
   }
 .swiper-container{
     padding-top: 100px;
     position: relative;
-    left: 0.2%;
+    left: -20.8%;
+    top: 96px;
     z-index: 2;
-    
     height: 1000px;
-    width: 1000px;
+    width: 1128px;
     background-image: url(assests/computer.png);
     background-size: 100%;
     background-repeat: no-repeat; 
 }
 .swiper-wrapper{
     position: relative;
+    justify-content: center;
 }
  .swiper-slide{
      height: 400px !important;
-     width: 500 !important;
+     width: 650 !important;
      position: relative;
-     z-index: -1;
+ 
+ 
  }
  .image-slider{
+     position: relative;
+     top: 40px;
      width: 600px;
    
  }
