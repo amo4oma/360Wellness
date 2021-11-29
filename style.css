@@ -220,6 +220,7 @@ width: 80%;
     border: 3px solid #ED1D6D;
     position: relative;
     left: 50%;
+    padding-left: 40px;
   
 }
 .pill-1 h3{
@@ -233,13 +234,38 @@ width: 80%;
     font-family: Mont regular;
     font-size: 20px;
     line-height: 1;
+
 }
 
 .icon-1{
      position: relative;
      bottom: 10px;
    height: 200px;
-   width: 200px !important;
+   width: 150px !important;
+   object-fit: contain;
+   
+}
+.icon-2{
+     position: relative;
+     bottom: 10px;
+   height: 200px;
+   width: 150px !important;
+   object-fit: contain;
+   
+}
+.icon-3{
+     position: relative;
+     bottom: 10px;
+   height: 200px;
+   width: 150px !important;
+   object-fit: contain;
+   
+}
+.icon-4{
+     position: relative;
+     bottom: 10px;
+   height: 200px;
+   width: 150px !important;
    object-fit: contain;
    
 }
@@ -250,6 +276,7 @@ width: 80%;
     border-radius: 125px;
     background-color: #006EB9;
     box-shadow: 0 15px 25px 0 rgba(0,0,0,0.3);
+    padding-left: 40px;
   
 }
 .pill-2 h3{
@@ -273,6 +300,7 @@ width: 80%;
     border-radius: 125px;
     background-color: #006EB9;
     box-shadow: 0 15px 25px 0 rgba(0,0,0,0.3);
+    padding-left: 40px;
   
 }
 .pill-3 h3{
@@ -293,6 +321,7 @@ width: 80%;
     width: 570px;
     border-radius: 125px;
     border: 3px solid #ED1D6D;
+    padding-left: 40px;
    
   
 }
