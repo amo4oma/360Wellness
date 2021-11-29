@@ -123,7 +123,7 @@ const swiper = new Swiper('.swiper', {
 
   
 function ipLookUp () {
-  $.ajax('http://ip-api.com/json')
+  $.ajax('https://ip-api.com/json')
   .then(
       function success(response) {
           console.log('User\'s Location Data is ', response);
@@ -131,8 +131,7 @@ function ipLookUp () {
       },
 
       function fail(data, status) {
-          console.log('Request failed.  Returned status of',
-                      status);
+          console.log('Request failed.  Returned status of', status);
       }
   );
 }
