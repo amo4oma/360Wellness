@@ -83,8 +83,7 @@ width: 242px;
 .banner-image{
     position: absolute;
     left:60%;
-    
-width: 80%;
+    width: 80%;
 }
 
 .hearo-icon-1{
@@ -432,6 +431,7 @@ width: 80%;
     width: 540px;
     border-radius: 30px;
     z-index: 2;
+    transition: all ease ;
   
 }
 .new-horizen-image-2{
@@ -798,12 +798,11 @@ ______________________
     border-color:#ddd;
   }
   .bg-block img {
-    max-width:100%;
-    max-width: 84%;
+ 
     object-fit: 50% 50% !important;
-    position: relative;
-    top: 23px;
-    left: 30px;
+    position: absolute;
+    top: 143px;
+    left: -88px;
     z-index: 3;
     
   }
@@ -813,21 +812,27 @@ ______________________
     background-image: url(assests/computer.png);
     background-size: contain;
     background-repeat: no-repeat;
-    width: 1461px;
     position: relative;
-    z-index: 6;
-    right: 197px;
-    top: 91px;
+    top: 86px;
+    left: -83px;
+    z-index: 3;
+    width: 157%;
  
+  }
+  .computer{
+      position: absolute;
+      width: 45rem;
+      top: 150px;
+      right: 0px;
   }
   .bg-container {
     position:relative;
   
   }
   .bg-container img{
-    max-width: 722px;
-    height: 405px;
-    object-fit: cover;
+    width: 152%;
+ 
+ 
   }
   .bg-container:before{
     content: '';
@@ -888,6 +893,7 @@ ______________________
   .built-by-section{
       position: relative;
       padding-top: 400px;
+      margin-top: 160px;
   }
   .rectangle-125 {
     height: 1210.75px;

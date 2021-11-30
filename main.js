@@ -1,10 +1,61 @@
- 
+gsap.config({nullTargetWarn: false});
 
+let tl = gsap.timeline({
+    scrollTrigger :{
+        trigger : "#banner-section",
+        scrub: 0.2,
+        markers: true,
+        start : "bottom bottom",
+        end: "+=" + (window.innerHeight * 10),
+        onLeave: () =>{
+          
+      
+       
+     
+        },
+        onEnterBack: () =>{
+      
+        }
+    }
+})
+
+
+ 
+tl.to('.banner-image',0.5,{x :'202%', y:"200%",display:"none"}, "first");
 
 $('.duration').click(()=>{$('.dropdown-content').show()})
 $('.week').click(()=>{$('.duration').html('week');$('.dropdown-content').hide() })
 $('.month').click(()=>{$('.duration').html('month');$('.dropdown-content').hide() })
 $('.year').click(()=>{$('.duration').html('year');$('.dropdown-content').hide() })
+
+
+
+
+
+
+let tl2 = gsap.timeline({
+  scrollTrigger :{
+      trigger : "#new-horizons",
+      scrub: 0.2,
+      markers: true,
+      start : "top center",
+      end: "+=" + (window.innerHeight * 10),
+      onLeave: () =>{
+        
+    
+     
+   
+      },
+      onEnterBack: () =>{
+    
+      }
+  }
+})
+
+ 
+tl2.to('.new-horizen-image-1',1,{ y:"-500px"}, "first");
+tl2.to('.new-horizen-image-2',1,{ y:"-500px"}, "first");
+tl2.to('.new-horizen-image-3',1,{ y:"-500px"}, "first");
 
 //revenue calculator
 
@@ -33,32 +84,13 @@ $('.RM').click(()=>{$('.usd').html('RM');$('.dropdown-currency').hide() })
 $('.SUD').click(()=>{$('.usd').html('SUD');$('.dropdown-currency').hide() })
  
  
- 
- 
- 
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    autoplay: {
-        delay: 1500},
-    loop: true,
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
- 
-  });
 
   $(document).ready(function () {
     //save boolean
     var pause = false;
+    
+    // detect scrolling 
+    var tempScrollTop = $(window).scrollTop();
     //save items that with number
     var item=  $('.select-item');
     //save blocks
@@ -73,7 +105,12 @@ const swiper = new Swiper('.swiper', {
     text.mouseover(()=>{pause = true})
     text.mouseout(()=>{pause = false})
     
+   
+     
+ 
+ 
      //interval function works only when pause is false
+     
       setInterval(function () {
           if (!pause) {
               var $this = item.eq(k);
@@ -122,17 +159,19 @@ const swiper = new Swiper('.swiper', {
   //Getting users location 
 
   
-function ipLookUp () {
-  $.ajax('http://ip-api.com/json')
-  .then(
-      function success(response) {
-          console.log('User\'s Location Data is ', response);
-          console.log('User\'s Country', response.country);
-      },
+// function ipLookUp () {
+//   $.ajax('http://ip-api.com/json/')
+//   .then(
+//       function success(response) {
+//           console.log('User\'s Location Data is ', response);
+//           console.log('User\'s Country', response.country);
+//       },
 
-      function fail(data, status) {
-          console.log('Request failed.  Returned status of', status);
-      }
-  );
-}
-ipLookUp()
+//       function fail(data, status) {
+//           console.log('Request failed.  Returned status of', status);
+//       }
+//   );
+// }
+// ipLookUp()
+
+
