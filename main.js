@@ -37,7 +37,7 @@ let tl2 = gsap.timeline({
   scrollTrigger :{
       trigger : "#new-horizons",
       scrub: 0.2,
-      markers: true,
+ 
       start : "top center",
       end: "+=" + (window.innerHeight * 10),
       onLeave: () =>{
@@ -57,6 +57,25 @@ tl2.to('.new-horizen-image-1',1,{ y:"-500px"}, "first");
 tl2.to('.new-horizen-image-2',1,{ y:"-500px"}, "first");
 tl2.to('.new-horizen-image-3',1,{ y:"-500px"}, "first");
 
+
+
+var windowWidth = $(window).width();
+
+$('#new-horizons').mousemove(function(event){
+  var moveX = (($(window).width() / 50) - event.pageX)/100;
+  var moveY = (($(window).height() / 50) - event.pageY)/200;
+  $('.new-horizen-image-1').css('margin-left', moveX + 'px');
+  $('.new-horizen-image-1').css('margin-top', -moveY + 'px');
+  $('.new-horizen-image-2').css('margin-left', -moveX + 'px');
+  $('.new-horizen-image-2').css('margin-right', -moveX + 'px');
+  $('.new-horizen-image-3').css('margin-top', -moveY + 'px');
+}); 
+
+$('.jelly-drops-container').mousemove(function(event){
+  var mX = (($(window).width() / 5) - event.pageX) * 0.01;
+  var mY = (($(window).height()/10) - event.pageY) * 0.00002 ;
+  $('.jelly-drops-container ').css('right', mX + 'px');
+}); 
 //revenue calculator
 
 $(document).ready(function(){
