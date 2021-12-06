@@ -1,3 +1,5 @@
+ 
+
 $(document).ready(function() {
  
   $(window).scroll(function() {
@@ -12,10 +14,13 @@ $(document).ready(function() {
 
 $(window).scroll(function(){
   if ($(document).scrollTop() >= 4400 ){
-    $('.circel-nav').css('margin-left','600px')
-    $
+    $('.circel-nav').css('margin-left','600px');
+    $('.one').removeClass('active');
+    $('.two').addClass('active')
   } else if ($(document).scrollTop() <= 4400 ){
     $('.circel-nav').css('margin-left','400px')
+    $('.one').addClass('active');
+    $('.two').removeClass('active')
   }
   console.log($(document).scrollTop())
 });
