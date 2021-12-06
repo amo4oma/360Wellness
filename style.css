@@ -43,10 +43,15 @@ body{
   }
   
  .navbar{
-     margin-top: 20px;
-     position: fixed;
-     
-    
+    margin-top: -28px;
+     position: fixed !important; 
+     z-index: 888;   
+     transition: all 0.5s ease;
+ }
+ .scrooled-nav{
+    margin-top: -58px;
+    background-color: rgba(252, 241, 243, 0.5);
+    transition: all 0.5s ease;
  }
  .nav-link{
      color: #000;
@@ -1068,4 +1073,31 @@ height: 1px;
     position: fixed;
     right: 7px;
     bottom: 11px;}
+}
+
+@media screen and (max-width: 770px) {
+    .rectangle-8 {
+        width: 77%;
+        height: 71vh;
+        position: absolute;
+        top: -20px;
+        right: 0px;
+         }
+         .rectangler-5 {
+            position: absolute;
+            height: 809.75px;
+            width: 676.75px;}
+            
+ 
+.steps-info-col {
+ 
+    width: 150%;}
+    .bg-block {
+        position: absolute;
+        top: 15%;
+        left: 67%;}
+        .rectangle-125 {
+            height: 917.75px;
+            width: 745.75px;}
+    
 }

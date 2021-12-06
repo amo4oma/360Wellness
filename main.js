@@ -1,10 +1,21 @@
+$(document).ready(function() {
+ 
+  $(window).scroll(function() {
+      if ($(document).scrollTop() > 150) {
+          $('#navbar').addClass('scrooled-nav');
+      }
+      else {
+        $('#navbar').removeClass('scrooled-nav');
+      }
+  });
+});
 gsap.config({nullTargetWarn: false});
 
 let tl = gsap.timeline({
     scrollTrigger :{
         trigger : "#banner-section",
         scrub: 0.2,
-        markers: true,
+ 
         start : "bottom bottom",
         end: "+=" + (window.innerHeight * 10),
         onLeave: () =>{
