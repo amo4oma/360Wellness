@@ -1008,6 +1008,21 @@ ______________________
     line-height: 2 !important;
  
 }
+.color-1{
+    color: #684a97;
+}
+.color-2{
+    color: #883f8d;
+}
+.color-3{
+    color: #953a89;
+}
+.color-4{
+    color: #a23685;
+}
+.color-5{
+    color: #b03181;
+}
 .contact-row{
     padding-top: 100px;
 }
