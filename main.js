@@ -9,6 +9,16 @@ $(document).ready(function() {
       }
   });
 });
+
+$(window).scroll(function(){
+  if ($(document).scrollTop() >= 4400 ){
+    $('.circel-nav').css('margin-left','600px')
+    $
+  } else if ($(document).scrollTop() <= 4400 ){
+    $('.circel-nav').css('margin-left','400px')
+  }
+  console.log($(document).scrollTop())
+});
 gsap.config({nullTargetWarn: false});
 
 let tl = gsap.timeline({
@@ -68,6 +78,24 @@ tl2.to('.new-horizen-image-1',1,{ y:"-500px"}, "first");
 tl2.to('.new-horizen-image-2',1,{ y:"-500px"}, "first");
 tl2.to('.new-horizen-image-3',1,{ y:"-500px"}, "first");
 
+let tl3 = gsap.timeline({
+  scrollTrigger :{
+      trigger : "#new-horizons",
+      scrub: 0.2,
+ 
+      start : "top center",
+      end: "+=" + (window.innerHeight * 10),
+      onLeave: () =>{
+        
+    
+     
+   
+      },
+      onEnterBack: () =>{
+    
+      }
+  }
+})
 
 
 var windowWidth = $(window).width();

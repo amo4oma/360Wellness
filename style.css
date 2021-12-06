@@ -52,13 +52,14 @@ body{
     margin-top: -58px;
     background-color: rgba(252, 241, 243, 0.5);
     transition: all 0.5s ease;
+    border-radius: 50px;
  }
  .nav-link{
-     color: #000;
+     color: #000 !important;
      font-family: Mont regular;
      line-height: 35px;
      font-size: 20px;
-     margin-left: 40px;
+     margin-left: 35px;
  }
  
  .nav-link.active{
@@ -67,13 +68,17 @@ body{
  }
  .nav-link.active::before{
     content: "";
+ 
+ }
+ .circel-nav{
     position: absolute;
     height: 12px;
     width: 12px;
     background-color: #ED1D6D;
-    bottom: 20px;
-   border-radius: 50px;
-   margin-left: 40px;
+    bottom: 15px;
+     border-radius: 50px;
+     margin-left: 400px;
+     transition: all 0.5s ease-in-out;
  }
 .rectangle-8 {
     width: 90%;
@@ -88,14 +93,15 @@ body{
     
 }
 .logo{
-height: 68px;
-width: 242px;
+width: 200px;
+margin-right: 90px;
 }
 
 .banner-image{
     position: absolute;
-    left:60%;
+    left: 52%;
     width: 80%;
+    top: 130px;
 }
 
 .hearo-icon-1{
@@ -143,8 +149,8 @@ width: 242px;
 	}
 }
 .main-banner-text{
-    margin-top: 100px;
-    width: 100%;
+    margin-top: 170px;
+    width: 95%;
     color: #006EB9;
     font-family: Mont-bold;
     font-weight: 700;
@@ -159,6 +165,7 @@ width: 242px;
     font-family: Mont regular;
     font-size: 20px;
     line-height: 25px;
+    margin-top: 50px;
 }
  
 .join-the-movement{
@@ -189,6 +196,7 @@ width: 242px;
     z-index: -5;
     width: 110%;
     top: -10px;
+    left: 0px;
  
 }
 
@@ -351,7 +359,7 @@ width: 242px;
 #signup{
     background-color: #F4F3F8;
     position: relative;
-    z-index: -6;
+    z-index: 0;
     height: 100vh;
 }
 .rectangle{
@@ -371,19 +379,19 @@ width: 242px;
 }
 .signup-title{
     height: 220px;
-    width: 380px;
+    width: 350px;
     color: #006EB9;
     font-family: Mont-bold;
-    font-size: 50px;
+    font-size: 39px;
     font-weight: 700;
-    line-height: 65px;
+    line-height: 50px;
 }
 .signup-p{
     height: 90px;
     width: 691px;
     color: #000;
     font-family: Mont regular;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 30px;
     font-weight: 500;
 }
@@ -405,7 +413,7 @@ width: 242px;
 
 #new-horizons{
  
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     background-color: #ED1D6D;
   
@@ -498,11 +506,11 @@ bottom: 150px;
 .start-growing-btn{
     color: #006EB9;
     font-family: Mont-bold !important;
-    font-size: 17px;
+    font-size: 20px;
     text-decoration: none;
     border-radius: 100rem;
     padding: 1rem;
-    padding: .5rem 3rem;
+    padding: .9rem 3rem;
     box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
     border: solid 3px transparent;
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #006EB9, #EC1C6D);
@@ -625,8 +633,9 @@ bottom: 150px;
 .cal-p{
     color: #000;
     font-family: Mont regular;
-    font-size: 25px;
-    line-height: 35px;
+    font-size: 20px;
+    line-height: 0px;
+    margin-top: 32px;
 }
 .cal-txt{
     color: #006EB9;
@@ -892,10 +901,17 @@ ______________________
 .result-h1{
     color: #ED1D6D;
     font-family: Mont-bold;
-    font-size: 150px;
+    font-size: 140px;
     font-weight: 700;
     line-height: 155px;
     transition: 1s;
+    margin-bottom: 50px;
+}
+.estimated{
+     font-size: 13px;
+     font-family: Mont-light;
+     width: 65% !important;
+     margin-top: 20px;
 }
 #steps{
     position: relative;
