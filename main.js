@@ -144,7 +144,7 @@ function calculate(){
 $('.usd').click(()=>{$('.dropdown-currency').show()})
 $('.USD').click(()=>{$('.usd').html('USD');$('.dropdown-currency').hide() })
 $('.RM').click(()=>{$('.usd').html('RM');$('.dropdown-currency').hide() })
-$('.SUD').click(()=>{$('.usd').html('SUD');$('.dropdown-currency').hide() })
+$('.SGD').click(()=>{$('.usd').html('SGD');$('.dropdown-currency').hide() })
  
  
 
