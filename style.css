@@ -41,18 +41,31 @@ body{
     font-family:  Mont book;
     src: url(assests/mont/Mont-Book.otf);
   }
-  
+  .navbar-expand-lg{
+      margin-left: -20px;
+  }
  .navbar{
+  padding: 0px 100px !important;
     margin-top: -28px;
+    height: 100px;
      position: fixed !important; 
      z-index: 888;   
      transition: all 0.5s ease;
+ 
  }
  .scrooled-nav{
-    margin-top: -58px;
-    background-color: rgba(252, 241, 243, 0.5);
+    margin-top: -50px;
+    height: 150px;
+    width: 110%;
+ /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+42,1+51,0+100 */
+background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,1) 42%, rgba(255,255,255,1) 51%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 42%,rgba(255,255,255,1) 51%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 42%,rgba(255,255,255,1) 51%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+
+    
     transition: all 0.5s ease;
-    border-radius: 50px;
+   
  }
  .nav-link{
      color: #000 !important;
@@ -75,7 +88,7 @@ body{
     height: 12px;
     width: 12px;
     background-color: #ED1D6D;
-    bottom: 15px;
+    bottom: 25px;
      border-radius: 50px;
      margin-left: 400px;
      transition: all 0.5s ease-in-out;
@@ -160,7 +173,7 @@ margin-right: 90px;
 }
 
 #banner-right-col p{
-    width: 45%;
+    width: 55%;
     color: #000;
     font-family: Mont regular;
     font-size: 20px;
@@ -220,7 +233,7 @@ margin-right: 90px;
     
 }
 #shave-hours{
-    margin-top: 20%;
+    margin-top:190px ;
     background-color: #F4F3F8;
 
 }
@@ -233,7 +246,7 @@ margin-right: 90px;
 }
 .pill-1{
     box-sizing: border-box;
-   height: 168px;
+    height: 149px;
     width: 570px;
     border-radius: 125px;
     border: 3px solid #ED1D6D;
@@ -258,7 +271,7 @@ margin-right: 90px;
 
 .icon-1{
      position: relative;
-     bottom: 10px;
+    bottom: 34px;
    height: 200px;
    width: 150px !important;
    object-fit: contain;
@@ -266,7 +279,7 @@ margin-right: 90px;
 }
 .icon-2{
      position: relative;
-     bottom: 10px;
+    bottom: 34px;
    height: 200px;
    width: 150px !important;
    object-fit: contain;
@@ -274,7 +287,7 @@ margin-right: 90px;
 }
 .icon-3{
      position: relative;
-     bottom: 10px;
+    bottom: 34px;
    height: 200px;
    width: 150px !important;
    object-fit: contain;
@@ -282,7 +295,7 @@ margin-right: 90px;
 }
 .icon-4{
      position: relative;
-     bottom: 10px;
+    bottom: 34px;
    height: 200px;
    width: 150px !important;
    object-fit: contain;
@@ -290,7 +303,8 @@ margin-right: 90px;
 }
 
 .pill-2{
-   height: 168px;
+  
+    height: 149px;
     width: 570px;
     border-radius: 125px;
     background-color: #006EB9;
@@ -314,7 +328,7 @@ margin-right: 90px;
     position: relative;
     left: 54%;
     top: 20px;
-    height: 168px;
+    height: 149px;
     width: 570px;
     border-radius: 125px;
     background-color: #006EB9;
@@ -336,7 +350,7 @@ margin-right: 90px;
 }
 .pill-4{
     box-sizing: border-box;
-   height: 168px;
+    height: 149px;
     width: 570px;
     border-radius: 125px;
     border: 3px solid #ED1D6D;
@@ -360,11 +374,11 @@ margin-right: 90px;
     background-color: #F4F3F8;
     position: relative;
     z-index: 0;
-    height: 100vh;
+    height: 85vh;
 }
 .rectangle{
     position: absolute;
-    z-index: -2;
+    z-index: -50;
     right: 211px;
     height: 743.82px;
     width: 693.82px;
@@ -376,6 +390,7 @@ margin-right: 90px;
 .sign-up-row{
    position: relative;
    top: 200px;
+  
 }
 .signup-title{
     height: 220px;
@@ -388,7 +403,7 @@ margin-right: 90px;
 }
 .signup-p{
     height: 90px;
-    width: 691px;
+    width: 102%;
     color: #000;
     font-family: Mont regular;
     font-size: 20px;
@@ -412,7 +427,7 @@ margin-right: 90px;
 }
 
 #new-horizons{
- 
+    position: relative;
     height: 80vh;
     width: 100%;
     background-color: #ED1D6D;
@@ -478,13 +493,15 @@ iframe{
     padding: 0px;
 }
 #revenue-calculator{
-margin-top: 600px;
+margin-top: 750px;
 height: 100vh;
 position: relative;
 bottom: 150px;
 
 }
-
+input[type=number] {
+    padding-left: 14px;
+}
 #rav-container{
     height: 80vh;
     background: #FCF8F3;
@@ -763,7 +780,7 @@ ______________________
     font-family: Mont regular;
     font-size: 20px;
     line-height: 10px;
-    margin-top: 36px;
+    margin-top: 20px;
   }
   .steps-info-col p{
     color: #828282;
@@ -804,8 +821,8 @@ ______________________
       -moz-user-select: none;
       -ms-user-select: none;
       position: relative;
-    top: 500px;
-    left: 330px;
+    top: 459px;
+    left: 270px;
     z-index: 6666;
    
    
@@ -860,7 +877,7 @@ ______________________
   
   }
   .bg-container img{
-    width: 152%;
+    width: 163%;
  
  
   }
@@ -930,7 +947,7 @@ ______________________
   .built-by-section{
       position: relative;
       padding-top: 400px;
-      margin-top: 160px;
+      margin-top: 300px;
   }
   .rectangle-125 {
     height: 1210.75px;
@@ -958,8 +975,8 @@ ______________________
   }
 
   .video-box{
-    height: 591px;
-    width: 1053px;
+    height: 491px;
+    width: 953px;
     border-radius: 50px;
     box-shadow: 0 15px 20px 0 rgba(0,0,0,0.5);
   
@@ -1051,13 +1068,17 @@ height: 1px;
   }
 
   .messenger{
-      height: 110px;
-      width: 110px;
+      height: 90px;
+      width: 90px;
       position: fixed;
       right: 20px;
       bottom: 40px;
       z-index: 9999;
       cursor: pointer;
+      box-shadow: -3px -3px 48px -1px rgba(0,0,0,0.59);
+      -webkit-box-shadow: -3px -3px 48px -1px rgba(0,0,0,0.59);
+      -moz-box-shadow: -3px -3px 48px -1px rgba(0,0,0,0.59);
+      border-radius: 50px;
   }
 
 

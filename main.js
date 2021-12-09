@@ -13,7 +13,7 @@ $(document).ready(function() {
 });
 
 $(window).scroll(function(){
-  if ($(document).scrollTop() >= 4400 ){
+  if ($(document).scrollTop() >= 4400){
     $('.circel-nav').css('margin-left','600px');
     $('.one').removeClass('active');
     $('.two').addClass('active')
@@ -24,6 +24,7 @@ $(window).scroll(function(){
   }
   console.log($(document).scrollTop())
 });
+
 gsap.config({nullTargetWarn: false});
 
 let tl = gsap.timeline({
@@ -85,12 +86,13 @@ tl2.to('.new-horizen-image-3',1,{ y:"-500px"}, "first");
 
 let tl3 = gsap.timeline({
   scrollTrigger :{
-      trigger : "#new-horizons",
+      trigger : "#shave-hours",
       scrub: 0.2,
- 
+     
+      markers: true,
       start : "top center",
-      end: "+=" + (window.innerHeight * 10),
-      onLeave: () =>{
+      end: "bottom bottom",
+          onLeave: () =>{
         
     
      
@@ -101,6 +103,12 @@ let tl3 = gsap.timeline({
       }
   }
 })
+
+tl3.from('.pill-1',5,{x:"800px"},'first')
+tl3.from('.pill-2',2,{x:"-800px"},'second')
+tl3.from('.pill-3',3,{x:"800px"},'third')
+tl3.from('.pill-4',4,{x:"-800px"},'forth')
+
 
 
 var windowWidth = $(window).width();
@@ -130,16 +138,36 @@ $(document).ready(function(){
 });
 
 
+$('.cal-input').keypress((e)=>{
+  $('.gradian').css('left', '-120%');
+  $('.result-h1').css('color', '#ED1D6D');
+})
+
 function calculate(){
   var input = $('.cal-input').val();
   
   var result = input * 1.2 
   var comma  = result.toLocaleString()
   console.log(comma);
- $('.result').html(comma);
+
+  $({ countNum: 0 }).animate({ countNum: 1000 }, {
+    duration: 1000, // tune the speed here
+    easing: 'linear',
+    step: function() {
+      // What todo on every count
+      $('.result').html(Math.floor(this.countNum));
+  
+    },
+    complete: function() {
+      $('.result').html(comma)
+    }
+  });
+
  $('.gradian').css('left', '0%');
- $('.result-h1').css('color', 'rgba(24, 17, 58, 0.9)');
+ $('.result-h1').css('color', '#fff');
 }
+
+ 
 
 $('.usd').click(()=>{$('.dropdown-currency').show()})
 $('.USD').click(()=>{$('.usd').html('USD');$('.dropdown-currency').hide() })
@@ -217,6 +245,8 @@ $('.SGD').click(()=>{$('.usd').html('SGD');$('.dropdown-currency').hide() })
 
   
   });
+
+
 
 
   //Getting users location 
