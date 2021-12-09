@@ -5,25 +5,56 @@ $(document).ready(function() {
   $(window).scroll(function() {
       if ($(document).scrollTop() > 150) {
           $('#navbar').addClass('scrooled-nav');
+          $('.circel-nav').css('bottom','49px')
       }
       else {
         $('#navbar').removeClass('scrooled-nav');
+        $('.circel-nav').css('bottom','25px')
       }
   });
 });
 
 $(window).scroll(function(){
-  if ($(document).scrollTop() >= 4400){
+  var scrollPosition = $(document).scrollTop()
+  if (scrollPosition >= 4400 && scrollPosition <= 5245){
     $('.circel-nav').css('margin-left','600px');
     $('.one').removeClass('active');
-    $('.two').addClass('active')
-  } else if ($(document).scrollTop() <= 4400 ){
+    $('.three').removeClass('active');
+    $('.four').removeClass('active');
+    $('.five').removeClass('active');
+    $('.two').addClass('active');
+  } else if (scrollPosition <= 4400 ){
     $('.circel-nav').css('margin-left','400px')
     $('.one').addClass('active');
-    $('.two').removeClass('active')
+    $('.two').removeClass('active');
+    $('.three').removeClass('active');
+    $('.four').removeClass('active');
+    $('.five').removeClass('active');
+  } else if (scrollPosition >= 5245 && scrollPosition <= 6140 ){
+    $('.circel-nav').css('margin-left','813px')
+    $('.one').removeClass('active');
+    $('.two').removeClass('active');
+    $('.three').addClass('active');
+    $('.four').removeClass('active');
+    $('.five').removeClass('active');
+  } else if (scrollPosition >= 6140 ){
+    $('.circel-nav').css('margin-left','971px')
+    $('.one').removeClass('active');
+    $('.two').removeClass('active');
+    $('.three').removeClass('active');
+    $('.four').addClass('active');
+    $('.five').removeClass('active');
   }
-  console.log($(document).scrollTop())
+
 });
+
+function about() {
+  $('html,body').animate({
+      scrollTop: $(".built-by-h1").offset().top});
+}
+
+
+
 
 gsap.config({nullTargetWarn: false});
 
@@ -50,10 +81,6 @@ let tl = gsap.timeline({
  
 tl.to('.banner-image',0.5,{x :'202%', y:"200%",display:"none"}, "first");
 
-$('.duration').click(()=>{$('.dropdown-content').show()})
-$('.week').click(()=>{$('.duration').html('week');$('.dropdown-content').hide() })
-$('.month').click(()=>{$('.duration').html('month');$('.dropdown-content').hide() })
-$('.year').click(()=>{$('.duration').html('year');$('.dropdown-content').hide() })
 
 
 
@@ -81,7 +108,7 @@ let tl2 = gsap.timeline({
 
  
 tl2.to('.new-horizen-image-1',1,{ y:"-500px"}, "first");
-tl2.to('.new-horizen-image-2',1,{ y:"-500px"}, "first");
+tl2.to('.new-horizen-image-2',1,{ y:"-800px"}, "first");
 tl2.to('.new-horizen-image-3',1,{ y:"-500px"}, "first");
 
 let tl3 = gsap.timeline({
@@ -89,7 +116,7 @@ let tl3 = gsap.timeline({
       trigger : "#shave-hours",
       scrub: 0.2,
      
-      markers: true,
+ 
       start : "top center",
       end: "bottom bottom",
           onLeave: () =>{
@@ -104,10 +131,10 @@ let tl3 = gsap.timeline({
   }
 })
 
-tl3.from('.pill-1',5,{x:"800px"},'first')
-tl3.from('.pill-2',2,{x:"-800px"},'second')
-tl3.from('.pill-3',3,{x:"800px"},'third')
-tl3.from('.pill-4',4,{x:"-800px"},'forth')
+tl3.from('.pill-1',1,{x:"800px"},'first')
+tl3.from('.pill-2',1,{x:"-800px"},'second')
+tl3.from('.pill-3',1,{x:"800px"},'third')
+tl3.from('.pill-4',1,{x:"-800px"},'forth')
 
 
 
@@ -130,6 +157,8 @@ $('.jelly-drops-container').mousemove(function(event){
 }); 
 //revenue calculator
 
+ 
+
 $(document).ready(function(){
   $('.cal-input').keypress(function(e){
     if(e.keyCode==13)
@@ -141,12 +170,20 @@ $(document).ready(function(){
 $('.cal-input').keypress((e)=>{
   $('.gradian').css('left', '-120%');
   $('.result-h1').css('color', '#ED1D6D');
+  $('.start-growing-btn').css('box-shadow', '2px 1000px 1px #FCF8F3 inset');
+  $('.start-growing-btn').css('border', 'solid 3px transparent');
+  $('.start-growing-btn').css('color', '#006EB9');
+  $('.result-p').css('color', '#000')
+  
 })
+
+
+
 
 function calculate(){
   var input = $('.cal-input').val();
-  
-  var result = input * 1.2 
+  var removeComma = parseFloat(input.replace(/,/g,''))
+  var result = removeComma * 1.2 
   var comma  = result.toLocaleString()
   console.log(comma);
 
@@ -165,16 +202,52 @@ function calculate(){
 
  $('.gradian').css('left', '0%');
  $('.result-h1').css('color', '#fff');
+ $('.start-growing-btn').css('box-shadow', 'none');
+ $('.start-growing-btn').css('border', 'solid 3px #fff');
+ $('.start-growing-btn').css('color', '#fff');
+ $('.result-p').css('color', '#fff')
 }
 
- 
+function updateTextView(_obj){
+  var num = getNumber(_obj.val());
+  if(num==0){
+    _obj.val('');
+  }else{
+    _obj.val(num.toLocaleString());
+  }
+}
+function getNumber(_str){
+  var arr = _str.split('');
+  var out = new Array();
+  for(var cnt=0;cnt<arr.length;cnt++){
+    if(isNaN(arr[cnt])==false){
+      out.push(arr[cnt]);
+    }
+  }
+  return Number(out.join(''));
+}
+$(document).ready(function(){
+  $('input').on('keyup',function(){
+    updateTextView($(this));
+  });
+});
 
-$('.usd').click(()=>{$('.dropdown-currency').show()})
-$('.USD').click(()=>{$('.usd').html('USD');$('.dropdown-currency').hide() })
-$('.RM').click(()=>{$('.usd').html('RM');$('.dropdown-currency').hide() })
-$('.SGD').click(()=>{$('.usd').html('SGD');$('.dropdown-currency').hide() })
+$('.duration').click(()=>{$('.dropdown-content').show();$('.fa-chevron-down.tow').css('transform', 'rotate(180deg)')})
+$('.week').click(()=>{$('.duration').html('week');$('.dropdown-content').hide();$('.fa-chevron-down.tow').css('transform', 'rotate(0deg)') })
+$('.month').click(()=>{$('.duration').html('month');$('.dropdown-content').hide();$('.fa-chevron-down.tow').css('transform', 'rotate(0deg)') })
+$('.year').click(()=>{$('.duration').html('year');$('.dropdown-content').hide();$('.fa-chevron-down.tow').css('transform', 'rotate(0deg)') })
+
+
+
+$('.usd').click(()=>{$('.dropdown-currency').show();$('.fa-chevron-down.one').css('transform', 'rotate(180deg)')})
+
  
+$("ul[id*=currency] li").click(function () {
  
+  $('.usd').html($(this).attr('value'));
+  $('.fa-chevron-down.one').css('transform', 'rotate(0deg)');
+  $('.dropdown-currency').hide() 
+});
 
   $(document).ready(function () {
     //save boolean

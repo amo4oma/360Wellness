@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
 
     <title>360 Wellness</title>
@@ -21,13 +21,13 @@
 
 
 
- 
 
- 
+
+
 </head>
 
 <body>
-   
+
     <div class="rectangle-8"></div>
     <img src="assests/360 Icons_Chat.png" class="messenger"></img>
     <div class="container-fluid mt-lg-0">
@@ -45,7 +45,7 @@
                         <a class="nav-link one active" aria-current="page" href="#">Your Gains</a>
                         <a class="nav-link two" href="#rav-container">Revenue Calculator</a>
                         <a class="nav-link three" href="#steps"> Your Brand </a>
-                        <a class="nav-link four" href="#About">About Us </a>
+                        <a class="nav-link four" onclick="about()" href="#About">About Us </a>
                         <a class="nav-link five" href="#"> 360 Trainer Playbook</a>
                     </div>
                 </div>
@@ -145,7 +145,8 @@
                 <div class="col-lg-6">
                     <h1 class="signup-title">Sign up for free,
                         see what
-                       <br> we're about.</h1>
+                        <br> we're about.
+                    </h1>
                 </div>
                 <div class="col-lg-6">
                     <p class="signup-p">Sign up for free and see what 360Wellness can do for your fitness business, no
@@ -203,22 +204,104 @@
                     <div class="row row-cols-2 justify-content-md-center align-content-center">
                         <div class="col-lg-5 d-flex flex-column justify-content-center align-content-center">
                             <p class="cal-p">Your current revenue</p>
-                            <h1 class="cal-txt"><span class="usd">USD</span>  <i
-                                class="fal fa-chevron-down"></i><input class="cal-input" placeholder="6,000" type="number"></input>
-                                <span style="color: black; font-family: Mont regular;">per</span> <span class="duration">week </span><i
-                                    class="fal fa-chevron-down"></i>
+                            <h1 class="cal-txt"><span class="usd">USD</span> <i class="fal fa-chevron-down one"></i><input
+                                    class="cal-input" placeholder="6,000" data-a-sign="" data-a-dec="," data-a-sep="."
+                                    type="text"></input>
+                                <span style="color: black; font-family: Mont regular;">per</span> <span
+                                    class="duration">week </span><i class="fal fa-chevron-down tow"></i>
                             </h1>
                             <div class="dropdown-content">
                                 <li class="week">week</li>
                                 <li class="month">month</li>
                                 <li class="year">year</li>
                             </div>
-                            <div class="dropdown-currency">
+                            <ul id="currency" class="dropdown-currency" name="">
+                                <li value="USD" selected="selected">United States Dollars</li>
+                                <li value="EUR">Euro</li>
+                                <li value="GBP">United Kingdom Pounds</li>
+                                <li value="DZD">Algeria Dinars</li>
+                                <li value="ARP">Argentina Pesos</li>
+                                <li value="AUD">Australia Dollars</li>
+                                <li value="ATS">Austria Schillings</li>
+                                <li value="BSD">Bahamas Dollars</li>
+                                <li value="BBD">Barbados Dollars</li>
+                                <li value="BEF">Belgium Francs</li>
+                                <li value="BMD">Bermuda Dollars</li>
+                                <li value="BRR">Brazil Real</li>
+                                <li value="BGL">Bulgaria Lev</li>
+                                <li value="CAD">Canada Dollars</li>
+                                <li value="CLP">Chile Pesos</li>
+                                <li value="CNY">China Yuan Renmimbi</li>
+                                <li value="CYP">Cyprus Pounds</li>
+                                <li value="CSK">Czech Republic Koruna</li>
+                                <li value="DKK">Denmark Kroner</li>
+                                <li value="NLG">Dutch Guilders</li>
+                                <li value="XCD">Eastern Caribbean Dollars</li>
+                                <li value="EGP">Egypt Pounds</li>
+                                <li value="FJD">Fiji Dollars</li>
+                                <li value="FIM">Finland Markka</li>
+                                <li value="FRF">France Francs</li>
+                                <li value="DEM">Germany Deutsche Marks</li>
+                                <li value="XAU">Gold Ounces</li>
+                                <li value="GRD">Greece Drachmas</li>
+                                <li value="HKD">Hong Kong Dollars</li>
+                                <li value="HUF">Hungary Forint</li>
+                                <li value="ISK">Iceland Krona</li>
+                                <li value="INR">India Rupees</li>
+                                <li value="IDR">Indonesia Rupiah</li>
+                                <li value="IEP">Ireland Punt</li>
+                                <li value="ILS">Israel New Shekels</li>
+                                <li value="ITL">Italy Lira</li>
+                                <li value="JMD">Jamaica Dollars</li>
+                                <li value="JPY">Japan Yen</li>
+                                <li value="JOD">Jordan Dinar</li>
+                                <li value="KRW">Korea (South) Won</li>
+                                <li value="LBP">Lebanon Pounds</li>
+                                <li value="LUF">Luxembourg Francs</li>
+                                <li value="MYR">Malaysia Ringgit</li>
+                                <li value="MXP">Mexico Pesos</li>
+                                <li value="NLG">Netherlands Guilders</li>
+                                <li value="NZD">New Zealand Dollars</li>
+                                <li value="NOK">Norway Kroner</li>
+                                <li value="PKR">Pakistan Rupees</li>
+                                <li value="XPD">Palladium Ounces</li>
+                                <li value="PHP">Philippines Pesos</li>
+                                <li value="XPT">Platinum Ounces</li>
+                                <li value="PLZ">Poland Zloty</li>
+                                <li value="PTE">Portugal Escudo</li>
+                                <li value="ROL">Romania Leu</li>
+                                <li value="RUR">Russia Rubles</li>
+                                <li value="SAR">Saudi Arabia Riyal</li>
+                                <li value="XAG">Silver Ounces</li>
+                                <li value="SGD">Singapore Dollars</li>
+                                <li value="SKK">Slovakia Koruna</li>
+                                <li value="ZAR">South Africa Rand</li>
+                                <li value="KRW">South Korea Won</li>
+                                <li value="ESP">Spain Pesetas</li>
+                                <li value="XDR">Special Drawing Right (IMF)</li>
+                                <li value="SDD">Sudan Dinar</li>
+                                <li value="SEK">Sweden Krona</li>
+                                <li value="CHF">Switzerland Francs</li>
+                                <li value="TWD">Taiwan Dollars</li>
+                                <li value="THB">Thailand Baht</li>
+                                <li value="TTD">Trinidad and Tobago Dollars</li>
+                                <li value="TRL">Turkey Lira</li>
+                                <li value="VEB">Venezuela Bolivar</li>
+                                <li value="ZMK">Zambia Kwacha</li>
+                                <li value="EUR">Euro</li>
+                                <li value="XCD">Eastern Caribbean Dollars</li>
+                                <li value="XDR">Special Drawing Right (IMF)</li>
+                                <li value="XAG">Silver Ounces</li>
+                                <li value="XAU">Gold Ounces</li>
+                                <li value="XPD">Palladium Ounces</li>
+                                <li value="XPT">Platinum Ounces</li>
+                            </ul>
+                            <!-- <div class="dropdown-currency">
                                 <li class="USD">USD</li>
                                 <li class="SGD">SGD</li>
                                 <li class="RM">RM</li>
-                             
-                            </div>
+
+                            </div> -->
                         </div>
                         <div class="col-lg-5 ml-auto">
                             <a class="ravenue-btn" onclick="calculate()">Calculate your growth </a>
@@ -228,102 +311,102 @@
                 </div>
                 <div class="col-12 text-center">
                     <p class="result-p">Your current revenue</p>
-                    <h1 class="result-h1"><span class="usd">USD</span>  <span class="result">6,000.00</span></h1>
+                    <h1 class="result-h1"><span class="usd">USD</span> <span class="result">6,000.00</span></h1>
                     <a href="" class="start-growing-btn text-uppercase">Start growing your revenue today</a>
 
                 </div>
             </div>
         </div>
-        <div class="col-5">
-            <p class="estimated offset-3">* Estimate is an approximation based on available past data,
-   and is not guaranteed. </p>
-   </div>
+        <div class="col-12">
+            <p class="estimated offset-1">* Estimate is an approximation based on available past data,
+                and is not guaranteed. </p>
+        </div>
     </section>
     <section id="steps">
-       
-        
-   
-       
+
+
+
+
         <div class="rectangler-5"></div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-7 col-md-6">
                     <div class="steps-info-col">
-                        <h1 class="steps-header">Build, market, sell,<br> 
+                        <h1 class="steps-header">Build, market, sell,<br>
                             the way you want to.
                             All on a single web app.</h1>
-                            <div class="steps-text steps-active">
-                                <h6>Your brand</h6>
-                                <p> Build your brand according to your vision. </p>
-                            </div>
-                            <div class="steps-text">
-                                <h6>Your clients</h6>
-                                <p>Build, manage and grow your own global clients.</p>
-                            </div>
-                            <div class="steps-text">
-                                <h6>Your price</h6>
-                                <p>Decide your own rates & pricing packages.</p>
-                            </div>
-                            <div class="steps-text">
-                                <h6>Your business</h6>
-                                <p>Keep what's yours- full ownership of your business.</p>
-                            </div>
-                            <div class="steps-text">
-                                <h6>Your style</h6>
-                                <p>Offer online, in-person, or hybrid training.</p>
-                            </div>
-                            <div class="sign-up-btn">
-                                <a href="">SIGN UP FOR FREE TODAY</a>
-                            </div>
-                     
+                        <div class="steps-text steps-active">
+                            <h6>Your brand</h6>
+                            <p> Build your brand according to your vision. </p>
+                        </div>
+                        <div class="steps-text">
+                            <h6>Your clients</h6>
+                            <p>Build, manage and grow your own global clients.</p>
+                        </div>
+                        <div class="steps-text">
+                            <h6>Your price</h6>
+                            <p>Decide your own rates & pricing packages.</p>
+                        </div>
+                        <div class="steps-text">
+                            <h6>Your business</h6>
+                            <p>Keep what's yours- full ownership of your business.</p>
+                        </div>
+                        <div class="steps-text">
+                            <h6>Your style</h6>
+                            <p>Offer online, in-person, or hybrid training.</p>
+                        </div>
+                        <div class="sign-up-btn">
+                            <a href="">SIGN UP FOR FREE TODAY</a>
+                        </div>
+
                     </div>
 
                 </div>
                 <div class="col-lg-5 col-md-6">
                     <div class="page-wrapper">
-                     <!-- <img class="computer" src="assests/computer.png" alt=""> -->
+                        <!-- <img class="computer" src="assests/computer.png" alt=""> -->
                         <div class="bg-container">
-                                    <div class="bg-block active">
-                                        <img src="assests/Group 5.png">
-                                    </div>
-                                    <div class="bg-block">
-                                        <img src="assests/Group 2.png">
-                                    </div>
-                                    <div class="bg-block">
-                                    <img src="assests/Group 3.png">
-                                    </div>
-                                    <div class="bg-block">
-                                    <img src="assests/Group 4.png">
-                                    </div>
-                                    <div class="bg-block">
-                                    <img src="assests/Group 1.png">
-                                    </div>
+                            <div class="bg-block active">
+                                <img src="assests/Group 5.png">
+                            </div>
+                            <div class="bg-block">
+                                <img src="assests/Group 2.png">
+                            </div>
+                            <div class="bg-block">
+                                <img src="assests/Group 3.png">
+                            </div>
+                            <div class="bg-block">
+                                <img src="assests/Group 4.png">
+                            </div>
+                            <div class="bg-block">
+                                <img src="assests/Group 1.png">
+                            </div>
                         </div>
-                        
-                        
+
+
                         <ul class="select-block">
-                                        <li class="select-item active">
-                                      
-                                            
-                                        </li>
-                                        <li class="select-item">
-                                        
-                                            
-                                        </li>
-                                        <li class="select-item">
-                                            
-                                            
-                                        </li>
-                                        <li class="select-item">
-                                            
-                                            
-                                        </li>
-                                        <li class="select-item">
-                                            
-                                            
-                                        </li>
-                                    </ul>
-                          </div>
+                            <li class="select-item active">
+
+
+                            </li>
+                            <li class="select-item">
+
+
+                            </li>
+                            <li class="select-item">
+
+
+                            </li>
+                            <li class="select-item">
+
+
+                            </li>
+                            <li class="select-item">
+
+
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -335,29 +418,36 @@
         <div class="rectangle-125"></div>
         <div class="container">
             <div class="row">
-               <div class="col-6"></div>
-               <div class="col-6">
-                   <h1 class="built-by-h1" >Built by <br>
-                    wellness professionals, <br> 
-                    for wellness professionals.</h1>
-                    <p class="built-by-p">360Wellness was built by fitness professionals who know all too well the headaches of training clients while managing and growing a fitness business. Thoughtfully engineered with revolutionary solutions that redefine how fitness businesses are run, every aspect of the platform was purposefully created for one reason – to help fitness businesses grow bigger, easier.</p>
-               </div>
-               <div class="col-12 d-flex justify-content-center mt-5">
-                   <div class="video-box">
-                    <iframe  src="https://www.youtube.com/embed/LLmNshUVkd0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                   </div>
-               </div>
-               <div class="col-12 text-center">
-                   <h1 class="get-started-h1">Get started or get ahead. <br> 
-                    Either way, we've got you.</h1>
+                <div class="col-6"></div>
+                <div class="col-6">
+                    <h1 class="built-by-h1">Built by <br>
+                        wellness professionals, <br>
+                        for wellness professionals.</h1>
+                    <p class="built-by-p">360Wellness was built by fitness professionals who know all too well the
+                        headaches of training clients while managing and growing a fitness business. Thoughtfully
+                        engineered with revolutionary solutions that redefine how fitness businesses are run, every
+                        aspect of the platform was purposefully created for one reason – to help fitness businesses grow
+                        bigger, easier.</p>
+                </div>
+                <div class="col-12 d-flex justify-content-center mt-5">
+                    <div class="video-box">
+                        <iframe src="https://www.youtube.com/embed/LLmNshUVkd0?controls=0" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-12 text-center">
+                    <h1 class="get-started-h1">Get started or get ahead. <br>
+                        Either way, we've got you.</h1>
                     <p class="get-started-p">Tap into new markets, redefine your training services, <br>
                         and maximize your earning potential.</p>
-                     <span class="built-by-btn">
-                            <a href="" >START GROWING TODAY</a>
-                     </span>
-                         
-                     
-               </div>
+                    <span class="built-by-btn">
+                        <a href="">START GROWING TODAY</a>
+                    </span>
+
+
+                </div>
             </div>
         </div>
 
@@ -367,71 +457,60 @@
             <img width="200px" src="assests/Pasted Image.png" alt="">
             <div class="row mt-5">
                 <div class="col-3">
-                
-              
-                    
-                           
-                        
-                            
 
-                        <div class="footer-col-1 ">
-                            <p>A product developed by</p>
-                           
-                            
-                                <p class="bold font-20">360Sports Pte. Ltd.</p>
-                            
-                            
-                                <p>160 Robinson Road
-                                    #14-04 Singapore 
-                                    Business Federation Centre
-                                    068914 SINGAPORE</p>
-                        </div>
-                                
-                
+                    <div class="footer-col-1 ">
+                        <p>A product developed by</p>
+
+                        <p class="bold font-20">360Sports Pte. Ltd.</p>
+
+                        <p>160 Robinson Road
+                            #14-04 Singapore
+                            Business Federation Centre
+                            068914 SINGAPORE</p>
+                    </div>
 
                 </div>
                 <div class="col-3"></div>
                 <div class="col-5 ">
-                                <p>Follow us on</p>
-                       
-                     
-                        
-                            <i class="fab fa-facebook-f square color-1"></i><i class="fab fa-instagram square color-2"></i><i class="fab fa-linkedin-in square color-3"></i><i class="fab fa-twitter square color-4"></i><i class="fab fa-telegram-plane square color-5"></i>
-                         <div class="row contact-row">
-                             <div class="col-6">
-                                Contact Us<br>
-                                Privacy Policy
-                             </div>
-                             <div class="col-6">
-                                360 Trainer Playbook
-                                    User License Agreement
-                             </div>
-                         </div>
+                    <p>Follow us on</p>
+
+
+
+                    <i class="fab fa-facebook-f square color-1"></i><i class="fab fa-instagram square color-2"></i><i
+                        class="fab fa-linkedin-in square color-3"></i><i class="fab fa-twitter square color-4"></i><i
+                        class="fab fa-telegram-plane square color-5"></i>
+                    <div class="row contact-row">
+                        <div class="col-6">
+                            Contact Us<br>
+                            Privacy Policy
+                        </div>
+                        <div class="col-6">
+                            360 Trainer Playbook
+                            User License Agreement
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="footer-hr"></div> 
+            <div class="footer-hr"></div>
             <div class="col-12 text-center mt-4">
                 <p>@360Wellness 2021. All rights reserved.</p>
             </div>
         </div>
 
-        <span class="counter">1,234,567.00</span>
-        <span>$</span><span class="counter">1.99</span>
-        <span class="counter">12345</span>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
 
- 
- 
- 
 
 
-     <script src="main.js"></script>
- 
- 
+
+
+
+    <script src="main.js"></script>
+
+
 
 </body>
 
