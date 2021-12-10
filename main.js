@@ -333,7 +333,12 @@ $("ul[id*=currency] li").click(function () {
           }
 
           $(this).addClass('steps-active')
-          block.eq($(this).index()).addClass('active');
+          block.removeClass('active');
+          block.eq($(this).index()-1).addClass('active');
+ 
+          
+            
+      
       }, function () {
       
       //when hover event ends, start interval function

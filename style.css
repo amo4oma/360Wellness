@@ -660,7 +660,9 @@ input[type="number"] {
   font-family: Mont regular;
   font-size: 14px;
 }
-
+.usd{
+    cursor: pointer;
+}
 .cal-input {
   background: none;
   border: none;
