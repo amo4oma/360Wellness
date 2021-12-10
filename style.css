@@ -272,11 +272,12 @@ body {
 }
 
 .icon-1 {
-  position: relative;
-  bottom: 34px;
-  height: 200px;
-  width: 150px !important;
-  object-fit: contain;
+    position: relative;
+    bottom: 34px;
+    height: 200px;
+    width: 134px !important;
+    object-fit: contain;
+    margin-right: 37px;
 }
 .icon-2 {
   position: relative;
