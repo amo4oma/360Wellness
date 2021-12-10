@@ -775,6 +775,7 @@ ______________________ .page-wrapper {
 }
 .steps-active p {
   color: #000;
+  font-family: Mont-bold;
 }
 .sign-up-btn {
   margin-top: 50px;

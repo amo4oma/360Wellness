@@ -187,7 +187,11 @@ function calculate(){
   var comma  = result.toLocaleString()
   console.log(comma);
 
-  $({ countNum: 0 }).animate({ countNum: 1000 }, {
+
+  if (!input){
+    alert('please Enter amount')
+  }else {
+      $({ countNum: 0 }).animate({ countNum: 1000 }, {
     duration: 1000, // tune the speed here
     easing: 'linear',
     step: function() {
@@ -206,6 +210,8 @@ function calculate(){
  $('.start-growing-btn').css('border', 'solid 3px #fff');
  $('.start-growing-btn').css('color', '#fff');
  $('.result-p').css('color', '#fff')
+  }
+
 }
 
 function updateTextView(_obj){
@@ -302,6 +308,23 @@ $("ul[id*=currency] li").click(function () {
       //remove active class from all except this
           $(this).siblings().removeClass("active");
          $(this).addClass('active');
+        //remove active class from all
+        block.removeClass('active');
+        text.removeClass('steps-active')
+      //add active class to block item which is accounted as index cliked item
+        block.eq($(this).index()).addClass('active');
+        text.eq($(this).index()).addClass('steps-active');
+      //on hover stop interval function
+          pause = true;
+      }, function () {
+      
+      //when hover event ends, start interval function
+          pause = false;
+      });
+    text.hover(function () {
+      //remove active class from all except this
+          $(this).siblings().removeClass("steps-active");
+         $(this).addClass('steps-active');
         //remove active class from all
         block.removeClass('active');
         text.removeClass('steps-active')
