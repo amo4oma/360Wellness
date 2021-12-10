@@ -1,4 +1,4 @@
- 
+//NAV 
 
 $(document).ready(function() {
  
@@ -54,7 +54,9 @@ function about() {
 }
 
 
+//NAV ENDS 
 
+//BANNER ANIMATION
 
 gsap.config({nullTargetWarn: false});
 
@@ -82,11 +84,11 @@ let tl = gsap.timeline({
 tl.to('.banner-image',0.5,{x :'202%', y:"200%",display:"none"}, "first");
 
 
+//BANNER ANIMATION ENDS
 
 
 
-
-
+//IMAGES ANIMATION
 let tl2 = gsap.timeline({
   scrollTrigger :{
       trigger : "#new-horizons",
@@ -111,6 +113,9 @@ tl2.to('.new-horizen-image-1',1,{ y:"-500px"}, "first");
 tl2.to('.new-horizen-image-2',1,{ y:"-800px"}, "first");
 tl2.to('.new-horizen-image-3',1,{ y:"-500px"}, "first");
 
+//IMAGES ANIMATION ENDS
+
+//PILLS ANIMATION
 let tl3 = gsap.timeline({
   scrollTrigger :{
       trigger : "#shave-hours",
@@ -136,7 +141,7 @@ tl3.from('.pill-2',1,{x:"-800px"},'second')
 tl3.from('.pill-3',1,{x:"800px"},'third')
 tl3.from('.pill-4',1,{x:"-800px"},'forth')
 
-
+//PILLS ANIMATION ENDS
 
 var windowWidth = $(window).width();
 
@@ -150,11 +155,7 @@ $('#new-horizons').mousemove(function(event){
   $('.new-horizen-image-3').css('margin-top', -moveY + 'px');
 }); 
 
-$('.jelly-drops-container').mousemove(function(event){
-  var mX = (($(window).width() / 5) - event.pageX) * 0.01;
-  var mY = (($(window).height()/10) - event.pageY) * 0.00002 ;
-  $('.jelly-drops-container ').css('right', mX + 'px');
-}); 
+ 
 //revenue calculator
 
  
@@ -322,17 +323,17 @@ $("ul[id*=currency] li").click(function () {
           pause = false;
       });
     text.hover(function () {
-      //remove active class from all except this
-          $(this).siblings().removeClass("steps-active");
-         $(this).addClass('steps-active');
-        //remove active class from all
-        block.removeClass('active');
-        text.removeClass('steps-active')
-      //add active class to block item which is accounted as index cliked item
-        block.eq($(this).index()).addClass('active');
-        text.eq($(this).index()).addClass('steps-active');
-      //on hover stop interval function
+  
           pause = true;
+
+          var els = document.getElementsByClassName("steps-text");
+          for(var i = 0; i < els.length; i++)
+          {
+            $('.steps-text').removeClass('steps-active')
+          }
+
+          $(this).addClass('steps-active')
+          block.eq($(this).index()).addClass('active');
       }, function () {
       
       //when hover event ends, start interval function
