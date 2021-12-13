@@ -184,7 +184,7 @@ body {
 }
 
 #banner-right-col p {
-  width: 55%;
+  width: 67%;
   color: #000;
   font-family: Mont regular;
   font-size: 20px;
@@ -1149,4 +1149,11 @@ table {
 @media (min-width: 992px){
 .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 0rem !important;
-    padding-left: 0.5rem;}}
+    padding-left: 0.5rem;}
+  }
+  @media screen and (max-width :1399.20px) {
+    .nav-link{
+    
+     font-size: 15px;
+    }
+  }
