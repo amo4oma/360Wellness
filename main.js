@@ -31,14 +31,14 @@ $(window).scroll(function(){
     $('.four').removeClass('active');
     $('.five').removeClass('active');
   } else if (scrollPosition >= 5245 && scrollPosition <= 6140 ){
-    $('.circel-nav').css('margin-left','753px')
+    $('.circel-nav').css('margin-left','801px')
     $('.one').removeClass('active');
     $('.two').removeClass('active');
     $('.three').addClass('active');
     $('.four').removeClass('active');
     $('.five').removeClass('active');
   } else if (scrollPosition >= 6140 ){
-    $('.circel-nav').css('margin-left','884px')
+    $('.circel-nav').css('margin-left','948px')
     $('.one').removeClass('active');
     $('.two').removeClass('active');
     $('.three').removeClass('active');

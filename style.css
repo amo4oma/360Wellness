@@ -646,10 +646,13 @@ input[type="number"] {
   font-family: Mont-bold;
   line-height: 65px;
 }
+.fal{
+  cursor: pointer;
+}
 .ravenue-btn {
   position: relative;
   top: 40px;
-  left: 164px;
+  left: 155px;
   border-radius: 50px;
   background-color: #006eb9;
   color: #fff;
@@ -788,7 +791,7 @@ ______________________ .page-wrapper {
 }
 .steps-active p {
   color: #000;
-  font-family: Mont-bold;
+  font-family: Mont regular;
 }
 .sign-up-btn {
   margin-top: 50px;
@@ -1073,9 +1076,11 @@ table {
   .built-by-section{
     margin-top: 394px;
   }
+
 }
  
-@media screen and (min-width: 1400px) {
+ 
+@media screen and (min-width: 1400px) and (max-width: 1500px) {
 
   .ravenue-btn {
     position: relative;
