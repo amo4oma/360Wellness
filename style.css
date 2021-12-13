@@ -4,6 +4,7 @@
 }
 body {
   overflow-x: hidden;
+
 }
 
 @font-face {
@@ -257,6 +258,7 @@ body {
   left: 50%;
   padding-left: 40px;
   transition: all 0.7s ease;
+  padding-top: 20px;
 }
 .pill-1 h3 {
   color: #ed1d6d;
@@ -273,7 +275,7 @@ body {
 
 .icon-1 {
     position: relative;
-    bottom: 34px;
+    bottom: 54px;
     height: 200px;
     width: 134px !important;
     object-fit: contain;
@@ -281,21 +283,21 @@ body {
 }
 .icon-2 {
   position: relative;
-  bottom: 34px;
+  bottom: 54px;
   height: 200px;
   width: 150px !important;
   object-fit: contain;
 }
 .icon-3 {
   position: relative;
-  bottom: 34px;
+  bottom: 54px;
   height: 200px;
   width: 150px !important;
   object-fit: contain;
 }
 .icon-4 {
   position: relative;
-  bottom: 34px;
+  bottom: 54px;
   height: 200px;
   width: 150px !important;
   object-fit: contain;
@@ -309,6 +311,7 @@ body {
   box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.3);
   padding-left: 40px;
   transition: all 0.7s ease;
+  padding-top: 20px;
 }
 .pill-2 h3 {
   color: #ffffff;
@@ -333,6 +336,7 @@ body {
   box-shadow: 0 15px 25px 0 rgba(0, 0, 0, 0.3);
   padding-left: 40px;
   transition: all 0.7s ease;
+  padding-top: 20px;
 }
 .pill-3 h3 {
   color: #ffffff;
@@ -354,6 +358,7 @@ body {
   border: 3px solid #ed1d6d;
   padding-left: 40px;
   transition: all 0.7s ease;
+  padding-top: 20px;
 }
 .pill-4 h3 {
   color: #ed1d6d;
@@ -671,6 +676,7 @@ input[type="number"] {
   color: #006eb9;
   border-bottom: #fff solid 1px;
   padding-left: 20px;
+  padding-right: 20px;
 }
 
 .cal-input::placeholder {
@@ -711,6 +717,9 @@ input[type="number"] {
 }
 .dropdown-content li {
   border-bottom: #e0e0e0 solid 0.5px;
+}
+.year{
+  border-bottom: none !important;
 }
 
 .dropdown-currency {
@@ -770,7 +779,7 @@ ______________________ .page-wrapper {
 }
 .steps-info-col p {
   color: #828282;
-  font-family: Mont regular;
+  font-family: Mont light;
   font-size: 20px;
 }
 .steps-active h6 {
@@ -1056,8 +1065,18 @@ table {
   -moz-box-shadow: -3px -3px 48px -1px rgba(0, 0, 0, 0.59);
   border-radius: 50px;
 }
+@media screen and (min-width: 1400px) and (max-width: 1500px){
+  .container{
+    max-width: 1200px !important;
+    
+  }
+  .built-by-section{
+    margin-top: 394px;
+  }
+}
+ 
+@media screen and (min-width: 1400px) {
 
-@media screen and (max-width: 1400px) {
   .ravenue-btn {
     position: relative;
     top: 40px;
@@ -1127,3 +1146,7 @@ table {
     width: 745.75px;
   }
 }
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0rem !important;
+    padding-left: 0.5rem;}}

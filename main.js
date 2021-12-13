@@ -31,14 +31,14 @@ $(window).scroll(function(){
     $('.four').removeClass('active');
     $('.five').removeClass('active');
   } else if (scrollPosition >= 5245 && scrollPosition <= 6140 ){
-    $('.circel-nav').css('margin-left','813px')
+    $('.circel-nav').css('margin-left','753px')
     $('.one').removeClass('active');
     $('.two').removeClass('active');
     $('.three').addClass('active');
     $('.four').removeClass('active');
     $('.five').removeClass('active');
   } else if (scrollPosition >= 6140 ){
-    $('.circel-nav').css('margin-left','971px')
+    $('.circel-nav').css('margin-left','884px')
     $('.one').removeClass('active');
     $('.two').removeClass('active');
     $('.three').removeClass('active');
@@ -166,15 +166,18 @@ $(document).ready(function(){
     $('.ravenue-btn').click();
   });
 });
-
-
+$(".cal-input").on("input", function(){
+  // Print entered value in a div box
+  $(".result").text($(this).val());
+});
 $('.cal-input').keypress((e)=>{
   $('.gradian').css('left', '-120%');
   $('.result-h1').css('color', '#ED1D6D');
   $('.start-growing-btn').css('box-shadow', '2px 1000px 1px #FCF8F3 inset');
   $('.start-growing-btn').css('border', 'solid 3px transparent');
   $('.start-growing-btn').css('color', '#006EB9');
-  $('.result-p').css('color', '#000')
+  $('.result-p').css('color', '#000');
+  $('.your-current-text').html('Your current revenue')
   
 })
 
@@ -202,6 +205,7 @@ function calculate(){
     },
     complete: function() {
       $('.result').html(comma)
+ 
     }
   });
 
@@ -211,6 +215,7 @@ function calculate(){
  $('.start-growing-btn').css('border', 'solid 3px #fff');
  $('.start-growing-btn').css('color', '#fff');
  $('.result-p').css('color', '#fff')
+ $('.your-current-text').html('Your new potential revenue when you join 360Wellness')
   }
 
 }
@@ -245,13 +250,21 @@ $('.month').click(()=>{$('.duration').html('month');$('.dropdown-content').hide(
 $('.year').click(()=>{$('.duration').html('year');$('.dropdown-content').hide();$('.fa-chevron-down.tow').css('transform', 'rotate(0deg)') })
 
 
+$('.fa-chevron-down.one').click(function(){
+  $('.dropdown-currency').hide();$('.fa-chevron-down.one').css('transform', 'rotate(0deg)')
+})
+$('.fa-chevron-down.tow').click(function(){
+  $('.dropdown-content').hide();
+  $('.fa-chevron-down.tow').css('transform', 'rotate(0deg)')
+})
+
 
 $('.usd').click(()=>{$('.dropdown-currency').show();$('.fa-chevron-down.one').css('transform', 'rotate(180deg)')})
 
  
 $("ul[id*=currency] li").click(function () {
  
-  $('.usd').html($(this).attr('value'));
+  $('.currency-title').html($(this).attr('value'));
   $('.fa-chevron-down.one').css('transform', 'rotate(0deg)');
   $('.dropdown-currency').hide() 
 });
