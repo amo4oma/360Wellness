@@ -11,7 +11,7 @@
 
     <title>360 Wellness</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.1">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -44,7 +44,7 @@
                     <div class="navbar-nav ml-auto">
                         <a class="nav-link one active" aria-current="page" href="#">Your Gains</a>
                         <a class="nav-link two" href="#rav-container">Revenue Calculator</a>
-                        <a class="nav-link three" href="#steps"> Your Brand </a>
+                        <a class="nav-link three" onclick="steps()"> Your Brand </a>
                         <a class="nav-link four" onclick="about()" href="#About">About Us </a>
                         <a class="nav-link five" href="#"> 360 Trainer Playbook</a>
                     </div>
@@ -65,9 +65,9 @@
                         For wellness professionals.
                     </h1>
                     <p class="main-banner-p">No more management headaches.
-                       ,<br> We'll handle the heavy lifting.
+                       <br> We'll handle the heavy lifting.
                        <br> You focus on your customers.</p>
-                    <a class="join-the-movement mt-5" href="">Join the Movement</a>
+                    <a class="join-the-movement" onclick="openPopUp()">Join the Movement</a>
                 </div>
                 <div class="col-4">
 
@@ -151,7 +151,7 @@
                 <div class="col-lg-6">
                     <p class="signup-p">Sign up for free and see what 360Wellness can do for your fitness business, no
                         strings attached. </p>
-                    <a class="signup-btn" href="">Sign Up</a>
+                    <a class="signup-btn" onclick="openPopUp()">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -202,7 +202,7 @@
             <div class="container pt-3">
                 <div class="calculator">
                     <div class="row row-cols-2 justify-content-md-center align-content-center">
-                        <div class="col-lg-5 d-flex flex-column justify-content-center align-content-center">
+                        <div class="col-lg-6 d-flex flex-column justify-content-center align-content-center">
                             <p class="cal-p ">Your current revenue</p>
                             <h1 class="cal-txt"><span class="usd">USD</span> <i class="fal fa-chevron-down one"></i><input
                                     class="cal-input" oninput="myFunction()" value="6,000" data-a-sign="" data-a-dec="," data-a-sep="."
@@ -312,7 +312,7 @@
                 <div class="col-12 text-center">
                     <p class="result-p your-current-text">Your current revenue</p>
                     <h1 class="result-h1"><span class="currency-title">USD</span> <span class="result">6,000.00</span></h1>
-                    <a href="" class="start-growing-btn text-uppercase">Start growing your revenue today</a>
+                    <a onclick="openPopUp()"  class="start-growing-btn text-uppercase">Start growing your revenue today</a>
 
                 </div>
             </div>
@@ -322,6 +322,8 @@
                 and is not guaranteed. </p>
         </div>
     </section>
+    <span id="closePopUp"><i class="fas fa-times"></i> Close</span>
+    <iframe class="form-popUp" src="https://share.hsforms.com/1qgiERjXORDOICxJU3thRbA4zqvo?fbclid=IwAR0c4tCtyDn3Kvh-qG45zqwR9X4TfRKG-jq1snlMFVGV7qfVIv38exE4RoY" frameborder="0"></iframe>
     <section id="steps">
 
 
@@ -329,12 +331,12 @@
 
         <div class="rectangler-5"></div>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-7 col-md-6">
-                    <div class="steps-info-col">
+            <div class="row ">
+                <div class="col-lg-7 col-md-7 steps-row">
+                    <div class="steps-info-col ">
                         <h1 class="steps-header">Build, market, sell,<br>
                             the way you want to.
-                            All on a single web app.</h1>
+                           <br> All on a single web app.</h1>
                         <div class="steps-text steps-active">
                             <h6>Your brand</h6>
                             <p> Build your brand according to your vision. </p>
@@ -355,8 +357,8 @@
                             <h6>Your style</h6>
                             <p>Offer online, in-person, or hybrid training.</p>
                         </div>
-                        <div class="sign-up-btn">
-                            <a href="">SIGN UP FOR FREE TODAY</a>
+                        <div class="sign-up-btn" onclick="openPopUp()">
+                            <a >SIGN UP FOR FREE TODAY</a>
                         </div>
 
                     </div>
@@ -373,13 +375,13 @@
                                 <img src="assests/Group 2.png">
                             </div>
                             <div class="bg-block">
+                                <img src="assests/Group 1.png">
+                            </div>
+                            <div class="bg-block">
                                 <img src="assests/Group 3.png">
                             </div>
                             <div class="bg-block">
                                 <img src="assests/Group 4.png">
-                            </div>
-                            <div class="bg-block">
-                                <img src="assests/Group 1.png">
                             </div>
                         </div>
 
@@ -443,7 +445,7 @@
                     <p class="get-started-p">Tap into new markets, redefine your training services, <br>
                         and maximize your earning potential.</p>
                     <span class="built-by-btn">
-                        <a href="">START GROWING TODAY</a>
+                        <a onclick="openPopUp()">START GROWING TODAY</a>
                     </span>
 
 
@@ -512,7 +514,7 @@
 
 
 
-    <script src="main.js"></script>
+    <script src="main.js?v=1.1"></script>
 
 
 

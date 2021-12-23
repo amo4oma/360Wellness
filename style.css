@@ -49,6 +49,7 @@ body {
   height: 100px;
   position: fixed !important;
   z-index: 888;
+  width: 110%;
   transition: all 0.5s ease;
 }
 .scrooled-nav {
@@ -193,6 +194,7 @@ body {
 }
 
 .join-the-movement {
+  margin-top: 50px;
   color: #fff;
   font-family: Mont regular;
   font-size: 20px;
@@ -429,6 +431,13 @@ body {
   background: linear-gradient(132.92deg, #ed1d6d 0%, #ec1c6d 100%);
   text-transform: uppercase;
 }
+.signup-btn:hover {
+ 
+  color: #000;
+  box-shadow: -1px 15px 18px 0px rgba(71, 27, 27, 0.3);
+  -webkit-box-shadow: -1px 15px 18px 0px rgba(71, 27, 27, 0.3);
+  -moz-box-shadow: -1px 15px 18px 0px rgba(71, 27, 27, 0.3);
+}
 
 #new-horizons {
   position: relative;
@@ -652,7 +661,7 @@ input[type="number"] {
 .ravenue-btn {
   position: relative;
   top: 40px;
-  left: 155px;
+  left: 112px;
   border-radius: 50px;
   background-color: #006eb9;
   color: #fff;
@@ -701,16 +710,17 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 .dropdown-content {
+  font-family: Mont regular;
   position: relative;
   left: 331px;
-  height: 150px;
+  height: 100px;
   width: 150px;
   border-radius: 2px;
   background-color: #fff;
   color: #333;
   line-height: 1.5;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -748,7 +758,8 @@ input[type="number"] {
 }
 .dropdown-currency li {
   border-bottom: #e0e0e0 solid 0.5px;
-  font-size: 17px;
+  font-size: 20px;
+  font-family: Mont regular;
 }
  
 .duration {
@@ -764,7 +775,7 @@ ______________________ .page-wrapper {
   position: relative;
   z-index: 5;
   top: 200px;
-  width: 79%;
+  width: 81%;
   padding-left: 100px;
 }
 .steps-header {
@@ -793,7 +804,7 @@ ______________________ .page-wrapper {
   color: #000;
   font-family: Mont regular;
 }
-.sign-up-btn {
+.sign-up-btn  {
   margin-top: 50px;
   height: 75px;
   width: 342px;
@@ -803,13 +814,17 @@ ______________________ .page-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.sign-up-btn a {
   color: #fff;
   font-family: Mont regular;
-  text-decoration: none;
   font-size: 20px;
 }
+.sign-up-btn:hover {
+  box-shadow: -1px 15px 18px 0px rgba(71, 27, 27, 0.3);
+  -webkit-box-shadow: -1px 15px 18px 0px rgba(71, 27, 27, 0.3);
+  -moz-box-shadow: -1px 15px 18px 0px rgba(71, 27, 27, 0.3);
+  color: #000;
+}
+ 
 .select-block {
   list-style: none;
   padding: 0;
@@ -973,7 +988,7 @@ ______________________ .page-wrapper {
   box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.5);
 }
 
-.built-by-btn a {
+.built-by-btn  {
   height: 85px;
   width: 400px;
   border-radius: 50px;
@@ -986,6 +1001,13 @@ ______________________ .page-wrapper {
   margin-top: 100px;
   position: relative;
   top: 66px;
+}
+.built-by-btn:hover  {
+  box-shadow: -1px 15px 18px 0px rgba(71, 27, 27, 0.3);
+  -webkit-box-shadow: -1px 15px 18px 0px rgba(71, 27, 27, 0.3);
+  -moz-box-shadow: -1px 15px 18px 0px rgba(71, 27, 27, 0.3);
+  color: #000;
+
 }
 
 footer {
@@ -1038,7 +1060,9 @@ table {
 .font-20 {
   font-size: 25px;
 }
-
+a{
+  cursor: pointer;
+}
 .footer-hr {
   margin-top: 100px;
   width: 100%;
@@ -1076,16 +1100,79 @@ table {
   .built-by-section{
     margin-top: 394px;
   }
-
-}
- 
- 
-@media screen and (min-width: 1400px) and (max-width: 1500px) {
-
   .ravenue-btn {
     position: relative;
     top: 40px;
-    left: 164px;
+    left: 57px;}
+}
+ 
+ .form-popUp{
+ display: none;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 9999;
+  border-radius: 0px;
+
+
+ }
+ #closePopUp{
+    position: fixed;
+   z-index: 999999;
+   font-size: 17px;
+   top: 20px;
+   right: 20px;
+   cursor: pointer;
+   font-family: Mont regular;
+ }
+@media screen and (max-width: 1360px) {
+  .result-h1{
+    font-size: 120px;
+    margin-bottom: 10px;
+  }
+  .rectangle-125 {
+    height: 1209.75px;
+    width: 1102.75px;}
+}
+@media screen and (min-width: 1400px) and (max-width: 1500px) {
+  .join-the-movement{
+    margin-top: 1px;
+  }
+  .nav-link {
+    color: #000;
+    font-family: Mont regular;
+    line-height: 35px;
+    font-size: 18px;
+    margin-left: 32px;
+  }
+}
+@media screen and (max-width: 1299px) {
+  .ravenue-btn {
+    position: relative;
+    top: 43px;
+    left: 93px;
+  font-size: 24px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .ravenue-btn {
+    position: relative;
+    top: 48px;
+    left: 58px;
+  font-size: 20px;
+  }
+  .cal-txt{
+    font-size: 33px;
+  }
+}
+@media screen and (min-width: 1300px) and (max-width: 1400px) {
+  .join-the-movement{
+    margin-top: 1px;
+  }
+  .ravenue-btn {
+    position: relative;
+    top: 40px;
+    left: 108px;
     border-radius: 50px;
     background-color: #006eb9;
     color: #fff;
@@ -1162,3 +1249,61 @@ table {
      font-size: 15px;
     }
   }
+
+  @media  (max-width: 1280px) { 
+    .nav-link {
+      font-size: 14px;
+  }
+  .result-h1 {
+    font-size: 100px;
+    margin-bottom: 0px;
+}
+.start-growing-btn {
+  color: #006eb9;
+  font-family: Mont-bold !important;
+  font-size: 17px;
+  text-decoration: none;
+  border-radius: 100rem;
+  padding: 1rem;
+  padding: 0.9rem 2rem;
+}
+.result-p {
+  margin-top: 33px;}
+  .steps-header {
+ 
+    font-size: 37px;}
+   }
+
+
+   @media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
+only screen and (                min-resolution: 192dpi) and (min-width: 320px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 320px) { 
+
+  /* Small screen, retina, stuff to override above media query */
+
+  .ravenue-btn {
+    position: relative;
+    top: 48px;
+    left: 58px;
+  font-size: 20px;
+  }
+  .cal-txt{
+    font-size: 33px;
+  }
+  .result-h1{
+    font-size: 120px;
+    margin-bottom: 10px;
+  }
+  .rectangle-125 {
+    height: 1209.75px;
+    width: 1102.75px;}
+    .nav-link{
+    
+      font-size: 15px;
+     }
+
+}
