@@ -104,7 +104,7 @@ body {
   background-color: #ed1d6d;
   bottom: 25px;
   border-radius: 50px;
-  margin-left: 400px;
+  margin-left: 5%;
   transition: all 0.5s ease-in-out;
 }
 .rectangle-8 {
@@ -175,7 +175,7 @@ body {
 }
 .main-banner-text {
   margin-top: 170px;
-  width: 95%;
+  width: 100%;
   color: #006eb9;
   font-family: Mont-bold;
   font-weight: 700;
@@ -1097,6 +1097,9 @@ a{
     max-width: 1200px !important;
     
   }
+  .increase-ravenue-title {
+    width: 110%;
+  }
   .built-by-section{
     margin-top: 394px;
   }
@@ -1124,6 +1127,7 @@ a{
    right: 20px;
    cursor: pointer;
    font-family: Mont regular;
+   display: none;
  }
 @media screen and (max-width: 1360px) {
   .result-h1{
@@ -1275,35 +1279,3 @@ a{
    }
 
 
-   @media
-only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 320px),
-only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 320px),
-only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 320px),
-only screen and (        min-device-pixel-ratio: 2)      and (min-width: 320px),
-only screen and (                min-resolution: 192dpi) and (min-width: 320px),
-only screen and (                min-resolution: 2dppx)  and (min-width: 320px) { 
-
-  /* Small screen, retina, stuff to override above media query */
-
-  .ravenue-btn {
-    position: relative;
-    top: 48px;
-    left: 58px;
-  font-size: 20px;
-  }
-  .cal-txt{
-    font-size: 33px;
-  }
-  .result-h1{
-    font-size: 120px;
-    margin-bottom: 10px;
-  }
-  .rectangle-125 {
-    height: 1209.75px;
-    width: 1102.75px;}
-    .nav-link{
-    
-      font-size: 15px;
-     }
-
-}
