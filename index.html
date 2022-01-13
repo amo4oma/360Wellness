@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
 
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
 
     <title>360 Wellness</title>
 
-    <link rel="stylesheet" href="style.css?v=1.2">
+    <link rel="stylesheet" href="style.css?v=2.5">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -19,7 +19,13 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
+        <script type="text/javascript">
 
+            if (screen.width <= 699) {
+            document.location = "mobile.html";
+            }
+            
+            </script>
 
 
 
@@ -46,7 +52,7 @@
                         <a id="nav2" class="nav-link two" onclick="ravcontainer()">Revenue Calculator</a>
                         <a id="nav3" class="nav-link three" onclick="steps()"> Your Brand </a>
                         <a id="nav4" class="nav-link four" onclick="about()" >About Us </a>
-                        <a class="nav-link five" href="#"> 360 Trainer Playbook</a>
+                        <a class="nav-link five" href="#"><span class="coming-soon">Coming Soon!</span> 360 Trainer Playbook</a>
                         <div class="circel-nav"></div>
                     </div>
                 </div>
@@ -62,8 +68,8 @@
                 <div id="banner-right-col" class="col-7 mt-5 d-flex flex-column">
                     <h1 class="main-banner-text">
                         High-density growth platform.
-                        Low-hassle admin management.
-                        For wellness professionals.
+                       <br> Low-hassle admin management.
+                       <br> For wellness professionals.
                     </h1>
                     <p class="main-banner-p">No more management headaches.
                        <br> We'll handle the heavy lifting.
@@ -149,7 +155,7 @@
                         <br> we're about.
                     </h1>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 signup-col">
                     <p class="signup-p">Sign up for free and see what 360Wellness can do for your fitness business, no
                         strings attached. </p>
                     <a class="signup-btn" onclick="openPopUp()">Sign Up</a>
@@ -212,90 +218,173 @@
                                     class="duration">week </span><i class="fal fa-chevron-down tow"></i>
                             </h1>
                             <div class="dropdown-content">
-                                <li class="week">week</li>
-                                <li class="month">month</li>
-                                <li class="year">year</li>
+                                <li class="week b">week</li>
+                                <li class="month b">month</li>
+                                <li class="year b">year</li>
                             </div>
                             <ul id="currency" class="dropdown-currency" name="">
-                                <li value="USD" selected="selected">United States Dollars</li>
-                                <li value="EUR">Euro</li>
-                                <li value="GBP">United Kingdom Pounds</li>
-                                <li value="DZD">Algeria Dinars</li>
-                                <li value="ARP">Argentina Pesos</li>
-                                <li value="AUD">Australia Dollars</li>
-                                <li value="ATS">Austria Schillings</li>
-                                <li value="BSD">Bahamas Dollars</li>
-                                <li value="BBD">Barbados Dollars</li>
-                                <li value="BEF">Belgium Francs</li>
-                                <li value="BMD">Bermuda Dollars</li>
-                                <li value="BRR">Brazil Real</li>
-                                <li value="BGL">Bulgaria Lev</li>
-                                <li value="CAD">Canada Dollars</li>
-                                <li value="CLP">Chile Pesos</li>
-                                <li value="CNY">China Yuan Renmimbi</li>
-                                <li value="CYP">Cyprus Pounds</li>
-                                <li value="CSK">Czech Republic Koruna</li>
-                                <li value="DKK">Denmark Kroner</li>
-                                <li value="NLG">Dutch Guilders</li>
-                                <li value="XCD">Eastern Caribbean Dollars</li>
-                                <li value="EGP">Egypt Pounds</li>
-                                <li value="FJD">Fiji Dollars</li>
-                                <li value="FIM">Finland Markka</li>
-                                <li value="FRF">France Francs</li>
-                                <li value="DEM">Germany Deutsche Marks</li>
-                                <li value="XAU">Gold Ounces</li>
-                                <li value="GRD">Greece Drachmas</li>
-                                <li value="HKD">Hong Kong Dollars</li>
-                                <li value="HUF">Hungary Forint</li>
-                                <li value="ISK">Iceland Krona</li>
-                                <li value="INR">India Rupees</li>
-                                <li value="IDR">Indonesia Rupiah</li>
-                                <li value="IEP">Ireland Punt</li>
-                                <li value="ILS">Israel New Shekels</li>
-                                <li value="ITL">Italy Lira</li>
-                                <li value="JMD">Jamaica Dollars</li>
-                                <li value="JPY">Japan Yen</li>
-                                <li value="JOD">Jordan Dinar</li>
-                                <li value="KRW">Korea (South) Won</li>
-                                <li value="LBP">Lebanon Pounds</li>
-                                <li value="LUF">Luxembourg Francs</li>
-                                <li value="MYR">Malaysia Ringgit</li>
-                                <li value="MXP">Mexico Pesos</li>
-                                <li value="NLG">Netherlands Guilders</li>
-                                <li value="NZD">New Zealand Dollars</li>
-                                <li value="NOK">Norway Kroner</li>
-                                <li value="PKR">Pakistan Rupees</li>
-                                <li value="XPD">Palladium Ounces</li>
-                                <li value="PHP">Philippines Pesos</li>
-                                <li value="XPT">Platinum Ounces</li>
-                                <li value="PLZ">Poland Zloty</li>
-                                <li value="PTE">Portugal Escudo</li>
-                                <li value="ROL">Romania Leu</li>
-                                <li value="RUR">Russia Rubles</li>
-                                <li value="SAR">Saudi Arabia Riyal</li>
-                                <li value="XAG">Silver Ounces</li>
-                                <li value="SGD">Singapore Dollars</li>
-                                <li value="SKK">Slovakia Koruna</li>
-                                <li value="ZAR">South Africa Rand</li>
-                                <li value="KRW">South Korea Won</li>
-                                <li value="ESP">Spain Pesetas</li>
-                                <li value="XDR">Special Drawing Right (IMF)</li>
-                                <li value="SDD">Sudan Dinar</li>
-                                <li value="SEK">Sweden Krona</li>
-                                <li value="CHF">Switzerland Francs</li>
-                                <li value="TWD">Taiwan Dollars</li>
-                                <li value="THB">Thailand Baht</li>
-                                <li value="TTD">Trinidad and Tobago Dollars</li>
-                                <li value="TRL">Turkey Lira</li>
-                                <li value="VEB">Venezuela Bolivar</li>
-                                <li value="ZMK">Zambia Kwacha</li>
-                                <li value="EUR">Euro</li>
-                                <li value="XCD">Eastern Caribbean Dollars</li>
-                                <li value="XDR">Special Drawing Right (IMF)</li>
-                                <li value="XAG">Silver Ounces</li>
-                                <li value="XAU">Gold Ounces</li>
-                                <li value="XPD">Palladium Ounces</li>
-                                <li value="XPT">Platinum Ounces</li>
+                                <li class="b" value ="AED">AED</li>
+                                <li class="b" value ="AFN">AFN</li>
+                                <li class="b" value ="ALL">ALL</li>
+                                <li class="b" value ="AMD">AMD</li>
+                                <li class="b" value ="ANG">ANG</li>
+                                <li class="b" value ="AOA">AOA</li>
+                                <li class="b" value ="ARS">ARS</li>
+                                <li class="b" value ="AUD">AUD</li>
+                                <li class="b" value ="AWG">AWG</li>
+                                <li class="b" value ="AZN">AZN</li>
+                                <li class="b" value ="BAM">BAM</li>
+                                <li class="b" value ="BBD">BBD</li>
+                                <li class="b" value ="BDT">BDT</li>
+                                <li class="b" value ="BGN">BGN</li>
+                                <li class="b" value ="BHD">BHD</li>
+                                <li class="b" value ="BIF">BIF</li>
+                                <li class="b" value ="BMD">BMD</li>
+                                <li class="b" value ="BND">BND</li>
+                                <li class="b" value ="BOB">BOB</li>
+                                <li class="b" value ="BRL">BRL</li>
+                                <li class="b" value ="BSD">BSD</li>
+                                <li class="b" value ="BTN">BTN</li>
+                                <li class="b" value ="BWP">BWP</li>
+                                <li class="b" value ="BYN">BYN</li>
+                                <li class="b" value ="BZD">BZD</li>
+                                <li class="b" value ="CAD">CAD</li>
+                                <li class="b" value ="CDF">CDF</li>
+                                <li class="b" value ="CHF">CHF</li>
+                                <li class="b" value ="CLP">CLP</li>
+                                <li class="b" value ="CNY">CNY</li>
+                                <li class="b" value ="COP">COP</li>
+                                <li class="b" value ="CRC">CRC</li>
+                                <li class="b" value ="CUC">CUC</li>
+                                <li class="b" value ="CUP">CUP</li>
+                                <li class="b" value ="CVE">CVE</li>
+                                <li class="b" value ="CZK">CZK</li>
+                                <li class="b" value ="DJF">DJF</li>
+                                <li class="b" value ="DKK">DKK</li>
+                                <li class="b" value ="DOP">DOP</li>
+                                <li class="b" value ="DZD">DZD</li>
+                                <li class="b" value ="EGP">EGP</li>
+                                <li class="b" value ="ERN">ERN</li>
+                                <li class="b" value ="ETB">ETB</li>
+                                <li class="b" value ="EUR">EUR</li>
+                                <li class="b" value ="FJD">FJD</li>
+                                <li class="b" value ="FKP">FKP</li>
+                                <li class="b" value ="GBP">GBP</li>
+                                <li class="b" value ="GEL">GEL</li>
+                                <li class="b" value ="GGP">GGP</li>
+                                <li class="b" value ="GHS">GHS</li>
+                                <li class="b" value ="GIP">GIP</li>
+                                <li class="b" value ="GMD">GMD</li>
+                                <li class="b" value ="GNF">GNF</li>
+                                <li class="b" value ="GTQ">GTQ</li>
+                                <li class="b" value ="GYD">GYD</li>
+                                <li class="b" value ="HKD">HKD</li>
+                                <li class="b" value ="HNL">HNL</li>
+                                <li class="b" value ="HRK">HRK</li>
+                                <li class="b" value ="HTG">HTG</li>
+                                <li class="b" value ="HUF">HUF</li>
+                                <li class="b" value ="IDR">IDR</li>
+                                <li class="b" value ="ILS">ILS</li>
+                                <li class="b" value ="IMP">IMP</li>
+                                <li class="b" value ="INR">INR</li>
+                                <li class="b" value ="IQD">IQD</li>
+                                <li class="b" value ="IRR">IRR</li>
+                                <li class="b" value ="ISK">ISK</li>
+                                <li class="b" value ="JEP">JEP</li>
+                                <li class="b" value ="JMD">JMD</li>
+                                <li class="b" value ="JOD">JOD</li>
+                                <li class="b" value ="JPY">JPY</li>
+                                <li class="b" value ="KES">KES</li>
+                                <li class="b" value ="KGS">KGS</li>
+                                <li class="b" value ="KHR">KHR</li>
+                                <li class="b" value ="KMF">KMF</li>
+                                <li class="b" value ="KPW">KPW</li>
+                                <li class="b" value ="KRW">KRW</li>
+                                <li class="b" value ="KWD">KWD</li>
+                                <li class="b" value ="KYD">KYD</li>
+                                <li class="b" value ="KZT">KZT</li>
+                                <li class="b" value ="LAK">LAK</li>
+                                <li class="b" value ="LBP">LBP</li>
+                                <li class="b" value ="LKR">LKR</li>
+                                <li class="b" value ="LRD">LRD</li>
+                                <li class="b" value ="LSL">LSL</li>
+                                <li class="b" value ="LYD">LYD</li>
+                                <li class="b" value ="MAD">MAD</li>
+                                <li class="b" value ="MDL">MDL</li>
+                                <li class="b" value ="MGA">MGA</li>
+                                <li class="b" value ="MKD">MKD</li>
+                                <li class="b" value ="MMK">MMK</li>
+                                <li class="b" value ="MNT">MNT</li>
+                                <li class="b" value ="MOP">MOP</li>
+                                <li class="b" value ="MRU">MRU</li>
+                                <li class="b" value ="MUR">MUR</li>
+                                <li class="b" value ="MVR">MVR</li>
+                                <li class="b" value ="MWK">MWK</li>
+                                <li class="b" value ="MXN">MXN</li>
+                                <li class="b" value ="MYR">MYR</li>
+                                <li class="b" value ="MZN">MZN</li>
+                                <li class="b" value ="NAD">NAD</li>
+                                <li class="b" value ="NGN">NGN</li>
+                                <li class="b" value ="NIO">NIO</li>
+                                <li class="b" value ="NOK">NOK</li>
+                                <li class="b" value ="NPR">NPR</li>
+                                <li class="b" value ="NZD">NZD</li>
+                                <li class="b" value ="OMR">OMR</li>
+                                <li class="b" value ="PAB">PAB</li>
+                                <li class="b" value ="PEN">PEN</li>
+                                <li class="b" value ="PGK">PGK</li>
+                                <li class="b" value ="PHP">PHP</li>
+                                <li class="b" value ="PKR">PKR</li>
+                                <li class="b" value ="PLN">PLN</li>
+                                <li class="b" value ="PYG">PYG</li>
+                                <li class="b" value ="QAR">QAR</li>
+                                <li class="b" value ="RON">RON</li>
+                                <li class="b" value ="RSD">RSD</li>
+                                <li class="b" value ="RUB">RUB</li>
+                                <li class="b" value ="RWF">RWF</li>
+                                <li class="b" value ="SAR">SAR</li>
+                                <li class="b" value ="SBD">SBD</li>
+                                <li class="b" value ="SCR">SCR</li>
+                                <li class="b" value ="SDG">SDG</li>
+                                <li class="b" value ="SEK">SEK</li>
+                                <li class="b" value ="SGD">SGD</li>
+                                <li class="b" value ="SHP">SHP</li>
+                                <li class="b" value ="SLL">SLL</li>
+                                <li class="b" value ="SOS">SOS</li>
+                                <li class="b" value ="SPL">SPL</li>
+                                <li class="b" value ="SRD">SRD</li>
+                                <li class="b" value ="STN">STN</li>
+                                <li class="b" value ="SVC">SVC</li>
+                                <li class="b" value ="SYP">SYP</li>
+                                <li class="b" value ="SZL">SZL</li>
+                                <li class="b" value ="THB">THB</li>
+                                <li class="b" value ="TJS">TJS</li>
+                                <li class="b" value ="TMT">TMT</li>
+                                <li class="b" value ="TND">TND</li>
+                                <li class="b" value ="TOP">TOP</li>
+                                <li class="b" value ="TRY">TRY</li>
+                                <li class="b" value ="TTD">TTD</li>
+                                <li class="b" value ="TVD">TVD</li>
+                                <li class="b" value ="TWD">TWD</li>
+                                <li class="b" value ="TZS">TZS</li>
+                                <li class="b" value ="UAH">UAH</li>
+                                <li class="b" value ="UGX">UGX</li>
+                                <li class="b" value ="USD">USD</li>
+                                <li class="b" value ="UYU">UYU</li>
+                                <li class="b" value ="UZS">UZS</li>
+                                <li class="b" value ="VEF">VEF</li>
+                                <li class="b" value ="VND">VND</li>
+                                <li class="b" value ="VUV">VUV</li>
+                                <li class="b" value ="WST">WST</li>
+                                <li class="b" value ="XAF">XAF</li>
+                                <li class="b" value ="XCD">XCD</li>
+                                <li class="b" value ="XDR">XDR</li>
+                                <li class="b" value ="XOF">XOF</li>
+                                <li class="b" value ="XPF">XPF</li>
+                                <li class="b" value ="YER">YER</li>
+                                <li class="b" value ="ZAR">ZAR</li>
+                                <li class="b" value ="ZMW">ZMW</li>
+                                <li class="b" value ="ZWD">ZWD</li>
                             </ul>
                             <!-- <div class="dropdown-currency">
                                 <li class="USD">USD</li>
@@ -437,10 +526,7 @@
                 </div>
                 <div class="col-12 d-flex justify-content-center mt-5">
                     <div class="video-box">
-                        <iframe src="https://www.youtube.com/embed/LLmNshUVkd0?controls=0" title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/b7uWlzIJbOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col-12 text-center">
@@ -449,7 +535,7 @@
                     <p class="get-started-p">Tap into new markets, redefine your training services, <br>
                         and maximize your earning potential.</p>
                     <span class="built-by-btn">
-                        <a onclick="openPopUp()">START GROWING TODAY</a>
+                        <a class="start-growing-today-btn" onclick="openPopUp()">START GROWING TODAY</a>
                     </span>
 
 
@@ -484,19 +570,20 @@
 
                     <a href="https://www.facebook.com/360wellness.io" target="_blank"><i class="fab fa-facebook-f square color-1"></i></a>
                 </i>
-                <a href="https://www.instagram.com/360wellness.app/"><i class="fab fa-instagram square color-2"></i></a>
-                <a href="https://www.linkedin.com/company/360wellness/"><i class="fab fa-linkedin-in square color-3"></i></a>
-                <a href="https://twitter.com/360wellnessapp"><i class="fab fa-twitter square color-4"></i></a>
+                <a href="https://www.instagram.com/360wellness.app/" target="_blank"><i class="fab fa-instagram square color-2"></i></a>
+                <a href="https://www.linkedin.com/company/360wellness/" target="_blank"><i class="fab fa-linkedin-in square color-3"></i></a>
+                <a href="https://twitter.com/360wellnessapp" target="_blank"><i class="fab fa-twitter square color-4"></i></a>
                 <!-- <a href=""> <i class="fab fa-telegram-plane square color-5"></i></a> -->
                
                     <div class="row contact-row">
-                        <div class="col-6">
-                            Contact Us<br>
-                            Privacy Policy
+                        <div class="col-5">
+                           <a href="https://360wellness.io/contact-us/"> Contact Us</a><br>
+                           <a href="https://360wellness.io/privacy-policy/">Privacy Policy</a> 
                         </div>
-                        <div class="col-6">
-                            360 Trainer Playbook
-                            User License Agreement
+                        <div class="col-7">
+                            <a href="https://360wellness.io/eula/"> 360 Trainer Playbook
+                            User License Agreement</a>
+                           
                         </div>
                     </div>
                 </div>
@@ -518,8 +605,8 @@
 
 
 
-    <script src="main.js?v=1.2"></script>
-
+    <script src="main.js?v=2.6.1.000"></script>
+ 
 
 
 </body>

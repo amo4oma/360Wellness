@@ -122,7 +122,7 @@ let nav0 = gsap.timeline({
   scrollTrigger :{
       trigger : "#banner-section",
       scrub: 0.2,
-      marker: true,
+ 
       start : "top top",
       end: 'bottom bottom',
  
@@ -140,20 +140,27 @@ let nav1 = gsap.timeline({
   scrollTrigger :{
       trigger : ".increase-ravenue-p",
       scrub: 0.2,
-      marker: true,
+      
       start : "top top",
       end: 'bottom bottom',
  
   }
 })
+if (screenSize >= 1900 && window.devicePixelRatio >= 2){
+  nav1.to('.circel-nav', 0.1 , {marginLeft:'12%'})
+}else if(screenSize >= 1700) {
+  nav1.to('.circel-nav', 0.1 , {marginLeft:'9%'})
+}else {
+  nav1.to('.circel-nav', 0.1 , {marginLeft: '17%', })
+}
  
-nav1.to('.circel-nav', 0.1 , {marginLeft: '17%', })
+
 nav1.to('#nav2', 0.1 , {fontFamily: 'Mont-bold', })
 nav1.to('#nav1', 0.1 , {fontFamily: 'Mont regular', })
 nav1.to('#nav3', 0.1 , {fontFamily: 'Mont regular', })
 nav1.to('#nav4', 0.1 , {fontFamily: 'Mont regular', })
 
- 
+
 
 
 let nav2 = gsap.timeline({
@@ -169,7 +176,18 @@ let nav2 = gsap.timeline({
 })
 var screenSize = $(window).width()
 console.log(screenSize)
-nav2.to('.circel-nav', 0.1 , {marginLeft: screenSize >= 1500 ? '29%' : '27%',})
+console.log( window.devicePixelRatio)
+
+if (screenSize >= 1900 && window.devicePixelRatio >= 2){
+  nav2.to('.circel-nav', 0.1 , {marginLeft:'23%'})
+}else if(screenSize >= 1400 && window.devicePixelRatio >= 2) {
+  nav2.to('.circel-nav', 0.1 , {marginLeft:'28%'})
+}else if(screenSize >= 1700) {
+  nav2.to('.circel-nav', 0.1 , {marginLeft:'23%'})
+}else{
+  nav2.to('.circel-nav', 0.1 , {marginLeft: screenSize >= 1500 ? '29%' : '27%',})
+}
+
 nav2.to('#nav3', 0.1 , {fontFamily: 'Mont-bold', })
 nav2.to('#nav1', 0.1 , {fontFamily: 'Mont regular', })
 nav2.to('#nav2', 0.1 , {fontFamily: 'Mont regular', })
@@ -180,14 +198,24 @@ let nav3 = gsap.timeline({
   scrollTrigger :{
       trigger : "#About",
       scrub: 0.1,
-      markers: true,
+    
       start : "top top",
       end: 'top bottom',
 
     
   }
 })
-nav3.to('.circel-nav' , {marginLeft:screenSize <= 1499 ? '35%' : '37%'}, "s")
+if (screenSize >= 1900 && window.devicePixelRatio >= 2){
+  nav3.to('.circel-nav', 0.1 , {marginLeft:'32%'})
+}else if (window.devicePixelRatio >= 2){
+  nav3.to('.circel-nav' , {marginLeft:screenSize <= 1499 ? '36.5%' : '37%'}, "s")
+
+}else if(screenSize >= 1700) {
+  nav3.to('.circel-nav', 0.1 , {marginLeft:'31%'})
+}else{
+  nav3.to('.circel-nav' , {marginLeft:screenSize <= 1499 ? '35%' : '38%'}, "s")
+}
+
  
 nav3.to('#nav4', 0.1 , {fontFamily: 'Mont-bold', }, "s")
 nav3.to('#nav3', 0.1 , {fontFamily: 'Mont regular', }, "s")
@@ -198,17 +226,30 @@ nav3.to('#nav2', 0.1 , {fontFamily: 'Mont regular', }, "s")
 
  
 function ravcontainer() {
-  $('html,body').animate({
+  if ( window.devicePixelRatio >= 2){
+    $('html,body').animate({
+      scrollTop: $(".increase-ravenue-p").offset().top + 100});
+  }else {
+    $('html,body').animate({
+    
       scrollTop: $(".increase-ravenue-p").offset().top});
+  }
+
       
 }
 function about() {
   $('html,body').animate({
-    scrollTop: $("#About").offset().top +10});
+    scrollTop: $("#About").offset().top + 200});
 }
 function steps() {
-  $('html,body').animate({
-      scrollTop: $(".steps-row").offset().top});
+  if ( window.devicePixelRatio >= 2){
+    $('html,body').animate({
+      scrollTop: $(".steps-row").offset().top + 100});
+  }else {
+    $('html,body').animate({
+      scrollTop: $(".steps-row").offset().top +2});
+  }
+
       
 }
 
@@ -375,7 +416,11 @@ $("input").on("input", function(){
   // Print entered value in a div box
   updateTextView($(this));
   $(".result").html($(this).val());
-  console.log($(this).val());
+  var x = $(this).val().length
+  var xs = x * 8
+  if ( x > 5){
+    $('input').css('width', 150 + xs +'px')
+  }
 });
  
 function calculate(){
@@ -415,32 +460,48 @@ function calculate(){
 }
 
 
+ 
 
-$('.duration').click(()=>{$('.dropdown-content').show();$('.fa-chevron-down.tow').css('transform', 'rotate(180deg)')})
-$('.week').click(()=>{$('.duration').html('week');$('.dropdown-content').hide();$('.fa-chevron-down.tow').css('transform', 'rotate(0deg)') })
-$('.month').click(()=>{$('.duration').html('month');$('.dropdown-content').hide();$('.fa-chevron-down.tow').css('transform', 'rotate(0deg)') })
-$('.year').click(()=>{$('.duration').html('year');$('.dropdown-content').hide();$('.fa-chevron-down.tow').css('transform', 'rotate(0deg)') })
+$('.duration').click((event)=>{event.stopPropagation();$('.dropdown-content').addClass('open');$('.fa-chevron-down.tow').css('transform', 'rotate(180deg)')})
+$('.week').click(()=>{$('.duration').html('week');$('.dropdown-content').removeClass('open');$('.fa-chevron-down.tow').css('transform', 'rotate(0deg)') })
+$('.month').click(()=>{$('.duration').html('month');$('.dropdown-content').removeClass('open');$('.fa-chevron-down.tow').css('transform', 'rotate(0deg)') })
+$('.year').click(()=>{$('.duration').html('year');$('.dropdown-content').removeClass('open');$('.fa-chevron-down.tow').css('transform', 'rotate(0deg)') })
 
 
 $('.fa-chevron-down.one').click(function(){
-  $('.dropdown-currency').hide();$('.fa-chevron-down.one').css('transform', 'rotate(0deg)')
+ 
+  if ($('.dropdown-currency').hasClass('open')){
+    $('.dropdown-currency').toggleClass('open');$('.fa-chevron-down.one').css('transform', 'rotate(0deg)')
+  }else{
+    $('.dropdown-currency').toggleClass('open');$('.fa-chevron-down.one').css('transform', 'rotate(180deg)')
+  }
 })
 $('.fa-chevron-down.tow').click(function(){
-  $('.dropdown-content').hide();
-  $('.fa-chevron-down.tow').css('transform', 'rotate(0deg)')
+  if ($('.dropdown-content').hasClass('open')){
+    $('.dropdown-content').toggleClass('open');$('.fa-chevron-down.tow').css('transform', 'rotate(0deg)')
+  }else{
+    $('.dropdown-content').toggleClass('open');$('.fa-chevron-down.tow').css('transform', 'rotate(180deg)')
+  }
 })
 
 
-$('.usd').click(()=>{$('.dropdown-currency').show();$('.fa-chevron-down.one').css('transform', 'rotate(180deg)')})
+$('.usd').click((event)=>{event.stopPropagation();$('.dropdown-currency').addClass('open');$('.fa-chevron-down.one').css('transform', 'rotate(180deg)')})
 
  
 $("ul[id*=currency] li").click(function () {
  
   $('.currency-title, .usd').html($(this).attr('value'));
   $('.fa-chevron-down.one').css('transform', 'rotate(0deg)');
-  $('.dropdown-currency').hide() 
+  $('.dropdown-currency').removeClass('open') 
 });
 
+window.onclick = function(event) {
+  $('.dropdown-currency').removeClass('open') 
+  $('.fa-chevron-down.one').css('transform', 'rotate(0deg)')
+  $('.dropdown-content').removeClass('open') 
+  $('.fa-chevron-down.tow').css('transform', 'rotate(0deg)')
+ 
+}
   $(document).ready(function () {
     //save boolean
     var pause = false;
@@ -508,8 +569,9 @@ $("ul[id*=currency] li").click(function () {
           pause = false;
       });
     text.hover(function () {
-  
-          pause = true;
+
+       
+ 
 
           var els = document.getElementsByClassName("steps-text");
           for(var i = 0; i < els.length; i++)
@@ -520,7 +582,10 @@ $("ul[id*=currency] li").click(function () {
           $(this).addClass('steps-active')
           block.removeClass('active');
           block.eq($(this).index()-1).addClass('active');
- 
+          item.removeClass('active');
+          item.eq($(this).index()-1).addClass('active');
+      
+          pause = true;
           
             
       
@@ -537,8 +602,11 @@ $("ul[id*=currency] li").click(function () {
 
 
   //Getting users location 
-
-  
+$.get("https://ipinfo.io", function(response) {
+    $.get("https://restcountries.eu/rest/v2/alpha/"+response.country.toLowerCase(), function(res) {
+        console.log(res.currencies);
+    });
+}, "json");
 // function ipLookUp () {
 //   $.ajax('http://ip-api.com/json/')
 //   .then(
